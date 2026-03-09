@@ -1,3 +1,4 @@
+// Packages
 import {
   isRouteErrorResponse,
   Links,
@@ -7,7 +8,13 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+// Components
+import { TooltipProvider } from "./components/ui/tooltip";
+
+// Types
 import type { Route } from "./+types/root";
+
+// Styles
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -33,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="min-h-screen antialiased">
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
