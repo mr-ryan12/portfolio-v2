@@ -26,9 +26,8 @@ Follow-up TODOs:
 
 ### I. Component-First
 
-All UI MUST be built using shadcn/ui components as the primary building blocks. Custom
-components are only permitted when no suitable shadcn/ui component exists or when a
-meaningful composition of existing components cannot satisfy the requirement. New shadcn
+shadcn/ui primitives MUST be used as the default foundation for interactive UI elements and common surfaces.
+Custom layout and marketing components are encouraged when they compose or extend those primitives. New shadcn
 components MUST be added via `yarn shadcn add <component>` and MUST land in
 `app/components/ui/`. Inline one-off styles that duplicate component behavior are prohibited.
 
@@ -50,6 +49,7 @@ site where there is no test suite acting as a safety net.
 ### III. Design System Adherence
 
 All visual decisions MUST use the project design system:
+
 - Background: `bg-[#060816]` (dark base)
 - Typography: Inter font loaded via `root.tsx`
 - Colors and spacing: Tailwind CSS variables defined in `app/app.css`
@@ -63,10 +63,10 @@ Ad-hoc style decisions erode the coherence that makes the site credible to viewe
 
 ### IV. SSR Compatibility
 
-All components and data fetching MUST be compatible with React Router v7 server-side
-rendering. Data loading MUST use React Router loaders; client-side `useEffect` data fetching
-is prohibited for initial data. Browser-only APIs (e.g., `window`, `localStorage`) MUST be
-guarded with environment checks or deferred to client-side effects after hydration.
+Initial route data MUST come from React Router loaders. useEffect is not for initial data fetching. 
+It may be used only for client-only side effects or non-critical enhancement after render.
+Browser-only APIs (e.g., `window`, `localStorage`) MUST be guarded with environment checks or deferred
+to client-side effects after hydration.
 
 **Rationale**: SSR is enabled and is a core architectural decision. Breaking hydration or
 producing SSR/client mismatches creates flickering, accessibility regressions, and SEO
@@ -97,10 +97,13 @@ without necessity makes future updates harder and increases bundle size without 
 
 - Routes MUST be declared in `app/routes.ts` before being implemented under `app/routes/`
 - `TooltipProvider` is globally wrapped in `app/root.tsx`; features MUST NOT re-wrap it
-- All components added via shadcn MUST land in `app/components/ui/` unchanged
+- All components added via shadcn MUST land in app/components/ui/. Local customization is allowed,
+  but shared primitives should remain generic and reusable.
 - The `cn()` utility from `~/lib/utils` MUST be used for conditional class merging
 - `yarn typecheck` MUST pass before marking any task complete
 - Features follow the speckit workflow: spec → plan → tasks → implement
+- Interactive UI MUST remain keyboard accessible and preserve visible focus states.
+- Semantic HTML should be preferred before adding ARIA. No `<div>` soup.
 
 ## Governance
 
@@ -112,6 +115,7 @@ per semantic versioning rules (MAJOR: principle removal/redefinition; MINOR: new
 or section; PATCH: clarification/wording), and updating the Sync Impact Report header.
 
 **Versioning policy**:
+
 - MAJOR: Backward-incompatible governance change (removing or fundamentally redefining a
   principle in a way that invalidates prior decisions made under it).
 - MINOR: New principle or substantive new section added.
@@ -122,5 +126,9 @@ or section; PATCH: clarification/wording), and updating the Sync Impact Report h
 begins. Re-check after Phase 1 design is complete.
 
 **Runtime guidance**: See `CLAUDE.md` for day-to-day development commands and conventions.
+
+### VI. Proof Over Hype
+
+Project descriptions MUST emphasize concrete responsibilities, technical decisions, and measurable outcomes over generic claims. Portfolio content MUST be truthful and must not exaggerate scope, role, or impact.
 
 **Version**: 1.0.0 | **Ratified**: 2026-03-08 | **Last Amended**: 2026-03-08
