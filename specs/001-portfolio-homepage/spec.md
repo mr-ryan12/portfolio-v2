@@ -29,7 +29,7 @@ A hiring manager or technical recruiter lands on the portfolio homepage for the 
 
 ### User Story 2 - Project Credibility Review (Priority: P2)
 
-An employer who is intrigued after the hero section scrolls to see what the engineer has actually built. They want real outcomes, not just technology lists. They scan project cards looking for: what problem was solved, what the impact was, and whether the work is relevant to roles they hire for. They may click through to a project detail page or external link.
+An employer who is intrigued after the hero section scrolls to see what the engineer has actually built. They want real outcomes, not just technology lists. They scan project cards looking for: what problem was solved, what the impact was, and whether the work is relevant to roles they hire for. They may follow a clear path to more detail, such as a project detail page or external link.
 
 **Why this priority**: Projects are the primary proof of competence. Without credible, outcome-focused project summaries, the portfolio fails to differentiate from any other candidate with a similar resume.
 
@@ -106,18 +106,20 @@ An employer who is ready to reach out needs to find contact options quickly and 
 
 - **FR-001**: The homepage MUST include a hero section that displays the engineer's name, professional title or identity, target role type, and a brief value proposition
 - **FR-002**: The hero section MUST include at least one primary call-to-action (e.g., "View My Work" or "Get In Touch") that navigates to a relevant section or page
-- **FR-003**: The homepage MUST include a projects section displaying 3-5 curated projects, each with a title, outcome-focused summary, technology context, and a link to more detail or a live demo
+- **FR-003**: The homepage MUST include a projects section displaying 3–5 curated projects, each with a title, outcome-focused summary, technology context, and a clear path to more detail when available.
 - **FR-004**: Project summaries MUST lead with outcomes and impact, not technology lists — the "what was achieved" must be more prominent than the "how it was built"
-- **FR-005**: The homepage MUST include an about section with a personal narrative covering the engineer's background, professional focus, and what motivates their work
+- **FR-005**: The homepage MUST include an about section that explains the engineer’s background, professional focus, and working values in a concise, human, non-generic way
 - **FR-006**: The homepage MUST include a skills/toolbox section that organizes technologies into meaningful categories and distinguishes primary from supporting skills
 - **FR-007**: The homepage MUST include a contact section with at minimum an email link and LinkedIn profile link
-- **FR-008**: All external links (project demos, GitHub, LinkedIn) MUST open in a new browser tab
+- **FR-008**: External destination links such as demos, GitHub, and LinkedIn SHOULD open in a new browser tab to avoid navigating away from the portfolio unexpectedly
 - **FR-009**: The homepage MUST be fully usable on mobile devices — all sections, links, and content must be accessible without horizontal scrolling or zooming
-- **FR-010**: The page MUST load above-the-fold content (hero section) quickly enough that it is visible before a visitor loses patience on a standard broadband connection
+- **FR-010**: Above-the-fold content MUST render without being blocked by non-critical images or below-the-fold assets
 - **FR-011**: Navigation between sections MUST be provided (e.g., anchor links in a header or nav bar) so visitors can jump to any section directly
 - **FR-012**: The visual design MUST feel intentional and premium — consistent typography, spacing, and color usage throughout; no mismatched styles or visual clutter
 - **FR-013**: The homepage MUST NOT include content that reads as filler, padding, or generic boilerplate — every sentence must earn its place
 - **FR-014**: The contact section MUST include a GitHub profile link in addition to email and LinkedIn
+- **FR-015**: Interactive elements MUST be keyboard accessible and preserve visible focus states
+- **FR-016**: Project and about content MUST reflect the engineer’s real experience and MUST NOT exaggerate role, ownership, or results
 
 ## Success Criteria *(mandatory)*
 
@@ -128,7 +130,7 @@ An employer who is ready to reach out needs to find contact options quickly and 
 - **SC-003**: A visitor can initiate contact (open email client or navigate to LinkedIn) within 30 seconds of deciding to reach out, from any section of the page
 - **SC-004**: A technical reviewer can identify the engineer's primary technology stack within 20 seconds of viewing the skills section
 - **SC-005**: The homepage renders correctly and all functionality is accessible on screens as small as 320px wide
-- **SC-006**: Above-the-fold content (hero section) is visually complete and readable within 3 seconds on a standard broadband connection
+- **SC-006**: The hero section is readable and visually complete within 3 seconds under normal desktop browsing conditions
 - **SC-007**: No section of the homepage contains generic, templated, or filler text — every piece of content is specific to the engineer's real experience and goals
 - **SC-008**: The overall visual presentation is consistent — font choices, spacing, color palette, and component style are uniform across all sections
 
@@ -138,7 +140,7 @@ An employer who is ready to reach out needs to find contact options quickly and 
 - Projects will be real, completed work — not hypothetical or tutorial projects — with genuine outcomes the engineer can speak to
 - The portfolio is a single-page layout (all sections on the homepage) with optional deeper detail pages for individual projects
 - A GitHub profile link is assumed to be desired given this is a software engineer portfolio
-- No authentication, user accounts, or personalization is required — this is a public-facing static marketing page
+- No authentication, user accounts, or personalization is required — this is a public-facing marketing-style page
 - The design aesthetic assumed: dark background, premium typography, minimal but impactful — consistent with a high-quality product UI rather than a traditional resume site
 - Analytics or tracking (e.g., visit counts) is out of scope for this specification
 - Blog, writing section, or testimonials are out of scope unless added as a future enhancement
