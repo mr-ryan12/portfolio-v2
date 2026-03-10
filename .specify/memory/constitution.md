@@ -4,7 +4,7 @@ SYNC IMPACT REPORT
 Version change: (new) → 1.0.0
 Modified principles: N/A (initial ratification)
 Added sections:
-  - Core Principles (5 principles)
+  - Core Principles (6 principles)
   - Technology Stack
   - Development Workflow
   - Governance
@@ -50,7 +50,7 @@ site where there is no test suite acting as a safety net.
 
 All visual decisions MUST use the project design system:
 
-- Background: `bg-[#060816]` (dark base)
+- Background: `bg-canvas` (dark base) (defined in `app/app.css`)
 - Typography: Inter font loaded via `root.tsx`
 - Colors and spacing: Tailwind CSS variables defined in `app/app.css`
 - Theming: CSS variables approach — no `tailwind.config.js` overrides
@@ -63,7 +63,7 @@ Ad-hoc style decisions erode the coherence that makes the site credible to viewe
 
 ### IV. SSR Compatibility
 
-Initial route data MUST come from React Router loaders. useEffect is not for initial data fetching. 
+Initial route data MUST come from React Router loaders. `useEffect` MUST NOT be used for initial data fetching. 
 It may be used only for client-only side effects or non-critical enhancement after render.
 Browser-only APIs (e.g., `window`, `localStorage`) MUST be guarded with environment checks or deferred
 to client-side effects after hydration.
@@ -82,6 +82,16 @@ be built speculatively — implement only what is required by the current featur
 **Rationale**: A personal portfolio is a small, maintainable site. Complexity introduced
 without necessity makes future updates harder and increases bundle size without user benefit.
 
+### VI. Proof Over Hype
+
+Project descriptions MUST emphasize concrete responsibilities, technical
+decisions, and measurable outcomes over generic claims. Portfolio content MUST
+be truthful and must not exaggerate scope, role, or impact.
+
+**Rationale**: Employers use portfolios to assess both technical ability and
+professional judgment. Concrete, truthful, outcome-focused content is more
+persuasive than vague or exaggerated claims.
+
 ## Technology Stack
 
 - **Language**: TypeScript (strict)
@@ -97,7 +107,7 @@ without necessity makes future updates harder and increases bundle size without 
 
 - Routes MUST be declared in `app/routes.ts` before being implemented under `app/routes/`
 - `TooltipProvider` is globally wrapped in `app/root.tsx`; features MUST NOT re-wrap it
-- All components added via shadcn MUST land in app/components/ui/. Local customization is allowed,
+- All components added via shadcn MUST land in `app/components/ui/`. Local customization is allowed,
   but shared primitives should remain generic and reusable.
 - The `cn()` utility from `~/lib/utils` MUST be used for conditional class merging
 - `yarn typecheck` MUST pass before marking any task complete
@@ -126,9 +136,5 @@ or section; PATCH: clarification/wording), and updating the Sync Impact Report h
 begins. Re-check after Phase 1 design is complete.
 
 **Runtime guidance**: See `CLAUDE.md` for day-to-day development commands and conventions.
-
-### VI. Proof Over Hype
-
-Project descriptions MUST emphasize concrete responsibilities, technical decisions, and measurable outcomes over generic claims. Portfolio content MUST be truthful and must not exaggerate scope, role, or impact.
 
 **Version**: 1.0.0 | **Ratified**: 2026-03-08 | **Last Amended**: 2026-03-08
