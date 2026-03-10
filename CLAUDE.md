@@ -43,3 +43,10 @@ This is a personal portfolio site (Ryan McBride) built with **React Router v7** 
 
 **Type generation:**
 - React Router auto-generates route types into `.react-router/types/`; run `yarn typecheck` (which runs `react-router typegen` first) to regenerate after adding routes
+
+## Active Technologies
+- TypeScript 5.9 (strict mode enforced) + React Router v7 (SSR), TailwindCSS v4, shadcn/ui (radix-nova, neutral), lucide-react icons, Yarn v4 (001-portfolio-homepage)
+- None — static TypeScript data modules (`app/data/`) (001-portfolio-homepage)
+
+## Recent Changes
+- 001-portfolio-homepage: Added TypeScript 5.9 (strict mode enforced) + React Router v7 (SSR), TailwindCSS v4, shadcn/ui (radix-nova, neutral), lucide-react icons, Yarn v4
