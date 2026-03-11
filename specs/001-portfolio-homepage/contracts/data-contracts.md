@@ -65,7 +65,7 @@ export interface Project {
   outcome: string;
   description: string;
   technologies: Technology[];
-  links: ProjectLinks;
+  links?: ProjectLinks;
   image?: string;
   featured: boolean;
   order: number;
