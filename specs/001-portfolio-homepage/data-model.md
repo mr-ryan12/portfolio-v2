@@ -105,14 +105,14 @@ Singleton configuration object for the engineer's identity and contact informati
 
 ```typescript
 interface SiteConfigAbout {
-  headline: string;      // Short about section heading (e.g., "About Me")
-  paragraphs: string[];  // 2-4 paragraphs of personal narrative
+  headline: string;        // Short about section heading (e.g., "About Me")
+  paragraphs: string[];    // 2-4 paragraphs of personal narrative
 }
 
 interface SiteConfigContact {
-  email: string;         // Direct email address
-  linkedin: string;      // Full LinkedIn profile URL
-  github: string;        // Full GitHub profile URL
+  email: string;           // Direct email address
+  linkedin: string;        // Full LinkedIn profile URL
+  github: string;          // Full GitHub profile URL
 }
 
 interface SiteConfig {
