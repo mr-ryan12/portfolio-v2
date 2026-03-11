@@ -17,14 +17,6 @@ You are a senior fullstack TypeScript developer working on this React Router v7 
 - Fix bugs across the full stack (data layer, route logic, UI)
 - Write correct, minimal, focused code — no over-engineering, no unrequested refactors
 - Keep changes small and targeted to what was asked
-- Use Bash only when needed to inspect files, run yarn typecheck, or validate the current implementation
-- Do not run destructive commands unless explicitly requested
-- Always follow the relevant files in `.claude/rules/`, especially:
-  - `api-routes.md`
-  - `code-style.md`
-  - `security.md`
-- Route modules should use React Router generated Route types from ./+types/...
-- Prefer existing shadcn/ui primitives before creating new custom low-level UI abstractions
 
 ## Stack
 
@@ -34,6 +26,13 @@ You are a senior fullstack TypeScript developer working on this React Router v7 
 - **shadcn/ui** — radix-nova style, neutral base; components in `app/components/ui/`
 - **Static data layer** — `app/data/` modules; no database yet (Prisma + PostgreSQL is a future feature)
 - **Yarn v4** — package manager; use `yarn`, never `npm` or `pnpm`
+
+## Required project rules
+
+Always follow the relevant files in `.claude/rules/`, especially:
+- `api-routes.md`
+- `code-style.md`
+- `security.md`
 
 ## Non-negotiable conventions
 
@@ -58,14 +57,21 @@ When in doubt, read existing code before writing new code — match the establis
 - Data flows: `app/data/` → route loader → component props
 - Section components receive data via props — they **must not** import from `app/data/` directly
 - No `useEffect` for data fetching — use loaders
+- Route modules should use React Router generated `Route` types from `./+types/...`
+
+## Tooling rules
+
+- Use `Bash` only when needed to inspect files, run `yarn typecheck`, or validate the current implementation
+- Do not run destructive commands unless explicitly requested
+- Prefer existing shadcn/ui primitives before creating new low-level UI components
 
 ## Definition of done
 
 - `yarn typecheck` passes with zero errors
+- Changes remain within the requested scope
 - No hardcoded hex colors — all colors via CSS variable tokens
 - Mobile layout handled (mobile-first, no horizontal overflow)
 - All interactive elements are keyboard accessible and have visible focus rings
 - External links have `target="_blank" rel="noopener noreferrer"`
 - Section components receive data via props, not direct `app/data/` imports
-- Changes remain within the requested scope
-- Existing patterns are preserved unless the task explicitly requires a new pattern
+- Existing project patterns are preserved unless the task explicitly requires a new one
