@@ -29,20 +29,20 @@
 
 ### Data Layer
 
-- [ ] T002 [P] Create `app/data/technologies.ts` — export `TechnologyLinks` interface, `Technology` interface, `technologies: Technology[]` registry (real or placeholder entries), and `getTechnology(id: string): Technology` helper function
-- [ ] T003 [P] Create `app/data/config.ts` — export `SiteConfigAbout` interface, `SiteConfigContact` interface, `SiteConfig` interface, and `siteConfig: SiteConfig` singleton with placeholder content (name, title, tagline, targetRoles, about, contact)
-- [ ] T004 [P] Create `app/data/projects.ts` — export `ProjectLinks` type, `Project` interface, `projects: Project[]` array (1–2 draft entries), and `featuredProjects: Project[]` (filtered to `featured: true`, sorted ascending by `order`)
-- [ ] T005 [P] Create `app/data/skills.ts` — export `SkillGroup` interface and `skillGroups: SkillGroup[]` array with placeholder categories (Frontend, Backend, Tools), sorted ascending by `order`
+- [x] T002 [P] Create `app/data/technologies.ts` — export `TechnologyLinks` interface, `Technology` interface, `technologies: Technology[]` registry (real or placeholder entries), and `getTechnology(id: string): Technology` helper function
+- [x] T003 [P] Create `app/data/config.ts` — export `SiteConfigAbout` interface, `SiteConfigContact` interface, `SiteConfig` interface, and `siteConfig: SiteConfig` singleton with placeholder content (name, title, tagline, targetRoles, about, contact)
+- [x] T004 [P] Create `app/data/projects.ts` — export `ProjectLinks` type, `Project` interface, `projects: Project[]` array (1–2 draft entries), and `featuredProjects: Project[]` (filtered to `featured: true`, sorted ascending by `order`)
+- [x] T005 [P] Create `app/data/skills.ts` — export `SkillGroup` interface and `skillGroups: SkillGroup[]` array with placeholder categories (Frontend, Backend, Tools), sorted ascending by `order`
 
 ### Layout Shell
 
-- [ ] T006 [P] Create `app/components/site-header.tsx` — sticky header (`bg-canvas/80 backdrop-blur-md`), engineer name left, anchor nav links right (`#projects`, `#about`, `#skills`, `#contact`), Sheet mobile drawer triggered by lucide-react `Menu` icon, skip-to-content link (`<a href="#main-content">`) visually hidden until focused; define inline `NavLink` interface and `NAV_LINKS` constant
-- [ ] T007 [P] Create `app/components/site-footer.tsx` — minimal `<footer>` with copyright line and icon links (GitHub, LinkedIn) using lucide-react `Github` and `Linkedin` icons; `target="_blank" rel="noopener noreferrer"` on external links
+- [x] T006 [P] Create `app/components/site-header.tsx` — sticky header (`bg-canvas/80 backdrop-blur-md`), engineer name left, anchor nav links right (`#projects`, `#about`, `#skills`, `#contact`), Sheet mobile drawer triggered by lucide-react `Menu` icon, skip-to-content link (`<a href="#main-content">`) visually hidden until focused; define inline `NavLink` interface and `NAV_LINKS` constant
+- [x] T007 [P] Create `app/components/site-footer.tsx` — minimal `<footer>` with copyright line and icon links (GitHub, LinkedIn) using lucide-react `Github` and `Linkedin` icons; `target="_blank" rel="noopener noreferrer"` on external links
 
 ### Route Wiring
 
-- [ ] T008 Update `app/routes/home.tsx` — add `loader()` that imports from all four `app/data/` modules and returns `{ config: siteConfig, projects: featuredProjects, skillGroups }`; replace existing component body with `<SiteHeader />`, `<main id="main-content">` (empty for now), and `<SiteFooter />`; use `Route.ComponentProps` from `./+types/home` for component props typing
-- [ ] T009 Run `yarn typecheck` — all data module types and loader return type must resolve cleanly with zero errors before section work begins
+- [x] T008 Update `app/routes/home.tsx` — add `loader()` that imports from all four `app/data/` modules and returns `{ config: siteConfig, projects: featuredProjects, skillGroups }`; replace existing component body with `<SiteHeader />`, `<main id="main-content">` (empty for now), and `<SiteFooter />`; use `Route.ComponentProps` from `./+types/home` for component props typing
+- [x] T009 Run `yarn typecheck` — all data module types and loader return type must resolve cleanly with zero errors before section work begins
 
 **Checkpoint**: `yarn typecheck` passes — data contracts are live and the route loader is wired. Section components can now be built and consumed.
 
