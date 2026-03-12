@@ -4,6 +4,7 @@ import { featuredProjects } from "~/data/projects";
 import { skillGroups } from "~/data/skills";
 import SiteHeader from "~/components/site-header";
 import SiteFooter from "~/components/site-footer";
+import HeroSection from "~/components/sections/hero-section";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -35,7 +36,9 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   return (
     <>
       <SiteHeader />
-      <main id="main-content" className="min-h-screen" />
+      <main id="main-content" className="min-h-screen">
+        <HeroSection config={config} />
+      </main>
       <SiteFooter />
     </>
   );
