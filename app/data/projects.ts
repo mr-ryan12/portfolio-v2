@@ -34,7 +34,7 @@ export const projects: Project[] = [
       getTechnology("react"),
     ],
     links: {
-      repo: "https://github.com/ryanmcbride/portfolio-v2",
+      repo: "https://github.com/mr-ryan12/portfolio-v2",
     },
     featured: true,
     order: 1,
@@ -55,8 +55,8 @@ export const projects: Project[] = [
       getTechnology("docker"),
     ],
     links: {
-      repo: "https://github.com/ryanmcbride/task-manager",
-      demo: "https://tasks.example.com",
+      repo: "https://github.com/mr-ryan12/",
+      demo: "https://github.com/mr-ryan12/",
     },
     featured: true,
     order: 2,
