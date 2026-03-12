@@ -8,6 +8,7 @@ import HeroSection from "~/components/sections/hero-section";
 import ProjectsSection from "~/components/sections/projects-section";
 import AboutSection from "~/components/sections/about-section";
 import SkillsSection from "~/components/sections/skills-section";
+import ContactSection from "~/components/sections/contact-section";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -44,6 +45,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <ProjectsSection projects={projects} />
         <AboutSection about={config.about} />
         <SkillsSection skillGroups={skillGroups} />
+        <ContactSection contact={config.contact} />
       </main>
       <SiteFooter />
     </>
