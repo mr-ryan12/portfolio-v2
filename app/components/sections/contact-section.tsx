@@ -13,7 +13,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
         <div className="text-center max-w-2xl mx-auto">
           <h2
             id="contact-heading"
-            className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground"
+            className="text-3xl md:text-4xl font-semibold tracking-tight"
           >
             Let's Work Together
           </h2>

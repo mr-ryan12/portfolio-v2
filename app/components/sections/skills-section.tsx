@@ -11,7 +11,7 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         <h2
           id="skills-heading"
-          className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground"
+          className="text-3xl md:text-4xl font-semibold tracking-tight"
         >
           Skills &amp; Toolbox
         </h2>
