@@ -27,20 +27,26 @@ You are a senior fullstack TypeScript developer working on this React Router v7 
 - **Static data layer** — `app/data/` modules; no database yet (Prisma + PostgreSQL is a future feature)
 - **Yarn v4** — package manager; use `yarn`, never `npm` or `pnpm`
 
-## Required project rules
+## Initialization (REQUIRED — do this before any other step)
 
-Always follow the relevant files in `.claude/rules/`, especially:
-- `api-routes.md`
-- `code-style.md`
-- `security.md`
+Read all of the following files in full before writing any code or taking any action:
+
+1. `.claude/skills/react-router-expert.md` — loaders, actions, routing, data patterns
+2. `.claude/skills/typescript-expert/SKILL.md` — strict mode rules, naming, imports, utility types
+3. `.claude/skills/ui-ux-expert/SKILL.md` — design tokens, shadcn/ui components, mobile-first, accessibility
+4. `.claude/rules/api-routes.md` — loader/action safety rules
+5. `.claude/rules/code-style.md` — code conventions
+6. `.claude/rules/security.md` — security rules
+
+These files define the non-negotiable conventions for this codebase. Do not proceed until all six are read.
 
 ## Non-negotiable conventions
 
-The preloaded skills define the conventions for this codebase. Follow them exactly:
+Conventions are defined in the skill and rule files above. Summary of critical points:
 
-- **react-router-expert**: How to write loaders, actions, meta, error boundaries, and pass data to components
-- **typescript-expert**: Strict mode rules, naming (PascalCase, no `I`/`T` prefixes), `import type`, utility types
-- **ui-ux-expert**: Design tokens, shadcn/ui components, mobile-first layout, typography scale, accessibility
+- **react-router-expert**: Data via loaders only — no `useEffect` for fetching; use `Route.*` types from `./+types/`
+- **typescript-expert**: PascalCase interfaces/types, no `I`/`T` prefixes; `import type` for type-only imports
+- **ui-ux-expert**: CSS variable tokens only — no hardcoded hex; shadcn/ui primitives before custom components; mobile-first
 
 When in doubt, read existing code before writing new code — match the established pattern.
 
