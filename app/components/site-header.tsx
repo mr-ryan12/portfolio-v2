@@ -33,7 +33,7 @@ export default function SiteHeader(): React.ReactElement {
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-14">
         <a
-          href="#"
+          href="/"
           className="text-sm font-semibold text-foreground transition-colors duration-200 hover:text-muted-foreground"
         >
           {SITE_NAME}
