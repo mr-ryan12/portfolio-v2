@@ -17,7 +17,7 @@
 
 **Purpose**: Create the `app/data/` directory and confirm project scaffold is ready before foundational work begins.
 
-- [ ] T001 Create `app/data/` directory (run `mkdir -p app/data` from repo root)
+- [x] T001 Create `app/data/` directory (run `mkdir -p app/data` from repo root)
 
 ---
 
