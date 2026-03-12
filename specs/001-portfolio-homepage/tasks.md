@@ -93,8 +93,8 @@
 
 **Independent Test**: Read only the skills section and confirm a technical interviewer can identify the primary stack and supporting technologies in under 20 seconds. Verify technologies are grouped by meaningful category, not presented as a flat list.
 
-- [ ] T016 [US4] Create `app/components/sections/skills-section.tsx` — props: `{ skillGroups: SkillGroup[] }`; structure: `<section id="skills" aria-labelledby="skills-heading">`; `<h2 id="skills-heading">`; category grid (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`); each `SkillGroup` rendered as a group: `<h3>` for category label + `flex flex-wrap gap-2` of `Badge` components using `secondary` or `outline` variant (visually distinct from project tech badges); groups sorted by `order`
-- [ ] T017 [US4] Wire `<SkillsSection skillGroups={loaderData.skillGroups} />` inside `<main>` after `AboutSection` in `app/routes/home.tsx`; run `yarn typecheck`
+- [x] T016 [US4] Create `app/components/sections/skills-section.tsx` — props: `{ skillGroups: SkillGroup[] }`; structure: `<section id="skills" aria-labelledby="skills-heading">`; `<h2 id="skills-heading">`; category grid (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`); each `SkillGroup` rendered as a group: `<h3>` for category label + `flex flex-wrap gap-2` of `Badge` components using `secondary` or `outline` variant (visually distinct from project tech badges); groups sorted by `order`
+- [x] T017 [US4] Wire `<SkillsSection skillGroups={loaderData.skillGroups} />` inside `<main>` after `AboutSection` in `app/routes/home.tsx`; run `yarn typecheck`
 
 **Checkpoint**: Skills render in categorized groups with badges; visually scannable within 20 seconds.
 
