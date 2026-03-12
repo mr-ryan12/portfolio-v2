@@ -67,8 +67,8 @@
 
 **Independent Test**: Read only the projects section and confirm a non-technical person can describe what each project accomplished and why it mattered. Verify external links open in a new tab and technology badges are visible but secondary.
 
-- [ ] T012 [US2] Create `app/components/sections/projects-section.tsx` — props: `{ projects: Project[] }`; structure: `<section id="projects" aria-labelledby="projects-heading">`; section heading `<h2 id="projects-heading">`; responsive CSS grid (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`); each project rendered as shadcn/ui `Card`: `CardHeader` with project title + role `Badge`, `CardContent` with `outcome` (primary weight) + `description` (secondary, `text-muted-foreground`), `CardFooter` with `Badge` per technology + link buttons (only render if `links.demo` or `links.repo` exists, `target="_blank" rel="noopener noreferrer"`, lucide-react `ExternalLink` icon)
-- [ ] T013 [US2] Wire `<ProjectsSection projects={loaderData.projects} />` inside `<main>` after `HeroSection` in `app/routes/home.tsx`; run `yarn typecheck`
+- [x] T012 [US2] Create `app/components/sections/projects-section.tsx` — props: `{ projects: Project[] }`; structure: `<section id="projects" aria-labelledby="projects-heading">`; section heading `<h2 id="projects-heading">`; responsive CSS grid (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`); each project rendered as shadcn/ui `Card`: `CardHeader` with project title + role `Badge`, `CardContent` with `outcome` (primary weight) + `description` (secondary, `text-muted-foreground`), `CardFooter` with `Badge` per technology + link buttons (only render if `links.demo` or `links.repo` exists, `target="_blank" rel="noopener noreferrer"`, lucide-react `ExternalLink` icon)
+- [x] T013 [US2] Wire `<ProjectsSection projects={loaderData.projects} />` inside `<main>` after `HeroSection` in `app/routes/home.tsx`; run `yarn typecheck`
 
 **Checkpoint**: Project cards render correctly with outcome-first content; tech badges and external links work; grid is responsive.
 
