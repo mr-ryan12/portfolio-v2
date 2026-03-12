@@ -117,12 +117,12 @@
 
 **Purpose**: SEO metadata, accessibility hardening, visual consistency, and final quality gates across all sections.
 
-- [ ] T020 Update `meta()` export in `app/routes/home.tsx` — page title: `"${config.name} — ${config.title}"`, meta description from `config.tagline`, Open Graph tags (`og:title`, `og:description`, `og:type: "website"`); derive all values from `data` arg in `Route.MetaArgs`; verify no duplicate `<title>` or `<meta name="description">` from `app/root.tsx`
-- [ ] T021 [P] Accessibility audit across all sections in `app/components/sections/` — verify every `<section>` has `aria-labelledby` pointing to its `<h2>` id; verify skip-to-content link in `app/components/site-header.tsx` is first focusable element and jumps focus to `#main-content` on Enter; verify all icon-only buttons have `aria-label`
-- [ ] T022 [P] Visual consistency review across `app/components/sections/` — confirm all `<h2>` section headings use identical typographic treatment (`text-3xl md:text-4xl font-semibold tracking-tight`); consistent vertical rhythm between sections (`py-20 md:py-28`); no hardcoded hex colors; `Badge` variants consistent (default for project tech, secondary/outline for skills)
-- [ ] T023 [P] Mobile review at 320px — open dev tools, set viewport to 320px, verify: no horizontal overflow in any section, header Sheet drawer opens and closes, all contact/CTA tap targets are at least 44×44px, project cards stack to single column
-- [ ] T024 Run `yarn typecheck` — must pass with zero errors
-- [ ] T025 Run `yarn build` — must complete without error; fix any build-time issues before marking complete
+- [x] T020 Update `meta()` export in `app/routes/home.tsx` — page title: `"${config.name} — ${config.title}"`, meta description from `config.tagline`, Open Graph tags (`og:title`, `og:description`, `og:type: "website"`); derive all values from `data` arg in `Route.MetaArgs`; verify no duplicate `<title>` or `<meta name="description">` from `app/root.tsx`
+- [x] T021 [P] Accessibility audit across all sections in `app/components/sections/` — verify every `<section>` has `aria-labelledby` pointing to its `<h2>` id; verify skip-to-content link in `app/components/site-header.tsx` is first focusable element and jumps focus to `#main-content` on Enter; verify all icon-only buttons have `aria-label`
+- [x] T022 [P] Visual consistency review across `app/components/sections/` — confirm all `<h2>` section headings use identical typographic treatment (`text-3xl md:text-4xl font-semibold tracking-tight`); consistent vertical rhythm between sections (`py-20 md:py-28`); no hardcoded hex colors; `Badge` variants consistent (default for project tech, secondary/outline for skills)
+- [x] T023 [P] Mobile review at 320px — open dev tools, set viewport to 320px, verify: no horizontal overflow in any section, header Sheet drawer opens and closes, all contact/CTA tap targets are at least 44×44px, project cards stack to single column
+- [x] T024 Run `yarn typecheck` — must pass with zero errors
+- [x] T025 Run `yarn build` — must complete without error; fix any build-time issues before marking complete
 
 **Checkpoint**: `yarn typecheck` and `yarn build` both pass; all spec acceptance criteria met on visual inspection.
 
