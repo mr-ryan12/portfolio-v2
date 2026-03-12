@@ -10,9 +10,9 @@ import AboutSection from "~/components/sections/about-section";
 import SkillsSection from "~/components/sections/skills-section";
 import ContactSection from "~/components/sections/contact-section";
 
-export function meta({ data }: Route.MetaArgs) {
-  const pageTitle = data ? `${data.config.name} — ${data.config.title}` : "Ryan McBride";
-  const description = data?.config.tagline ?? "";
+export function meta(_args: Route.MetaArgs) {
+  const pageTitle = `${siteConfig.name} — ${siteConfig.title}`;
+  const description = siteConfig.tagline;
 
   return [
     { title: pageTitle },
