@@ -1,8 +1,6 @@
 import * as React from "react";
-import { Github, Linkedin } from "lucide-react";
-
-const GITHUB_URL = "https://github.com/ryanmcbride";
-const LINKEDIN_URL = "https://linkedin.com/in/ryanmcbride";
+import { GithubIcon, LinkedinIcon } from "~/components/brand-icons";
+import { siteConfig } from "~/data/config";
 
 export default function SiteFooter(): React.ReactElement {
   return (
@@ -12,22 +10,22 @@ export default function SiteFooter(): React.ReactElement {
 
         <div className="flex items-center gap-4">
           <a
-            href={GITHUB_URL}
+            href={siteConfig.contact.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub profile"
             className="transition-colors duration-200 hover:text-foreground"
           >
-            <Github className="h-5 w-5" />
+            <GithubIcon className="h-5 w-5" />
           </a>
           <a
-            href={LINKEDIN_URL}
+            href={siteConfig.contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
             className="transition-colors duration-200 hover:text-foreground"
           >
-            <Linkedin className="h-5 w-5" />
+            <LinkedinIcon className="h-5 w-5" />
           </a>
         </div>
       </div>

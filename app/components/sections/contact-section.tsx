@@ -1,4 +1,5 @@
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "~/components/brand-icons";
 import { Button } from "~/components/ui/button";
 import type { SiteConfigContact } from "~/data/config";
 
@@ -35,7 +36,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                <Linkedin className="h-4 w-4" />
+                <LinkedinIcon className="h-4 w-4" />
                 LinkedIn
               </a>
             </Button>
@@ -46,7 +47,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                <Github className="h-4 w-4" />
+                <GithubIcon className="h-4 w-4" />
                 GitHub
               </a>
             </Button>
