@@ -10,14 +10,16 @@ import AboutSection from "~/components/sections/about-section";
 import SkillsSection from "~/components/sections/skills-section";
 import ContactSection from "~/components/sections/contact-section";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ data }: Route.MetaArgs) {
+  const pageTitle = data ? `${data.config.name} — ${data.config.title}` : "Ryan McBride";
+  const description = data?.config.tagline ?? "";
+
   return [
-    { title: "Ryan McBride | Full-Stack Software Engineer" },
-    {
-      name: "description",
-      content:
-        "Portfolio of Ryan McBride, a full-stack software engineer building polished, modern web applications.",
-    },
+    { title: pageTitle },
+    { name: "description", content: description },
+    { property: "og:title", content: pageTitle },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "website" },
   ];
 }
 
