@@ -80,8 +80,8 @@
 
 **Independent Test**: Read only the about section and confirm it answers "who is this person and would I want to work with them?" in an authentic, non-templated way.
 
-- [ ] T014 [US3] Create `app/components/sections/about-section.tsx` — props: `{ about: SiteConfigAbout }`; structure: `<section id="about" aria-labelledby="about-heading">`; two-column layout on desktop (text left, optional decorative accent right), single column on mobile; `<h2 id="about-heading">` from `about.headline`; `about.paragraphs` mapped to `<p>` elements (`text-base leading-7 text-muted-foreground`); no markdown parsing — plain strings only
-- [ ] T015 [US3] Wire `<AboutSection about={loaderData.config.about} />` inside `<main>` after `ProjectsSection` in `app/routes/home.tsx`; run `yarn typecheck`
+- [x] T014 [US3] Create `app/components/sections/about-section.tsx` — props: `{ about: SiteConfigAbout }`; structure: `<section id="about" aria-labelledby="about-heading">`; two-column layout on desktop (text left, optional decorative accent right), single column on mobile; `<h2 id="about-heading">` from `about.headline`; `about.paragraphs` mapped to `<p>` elements (`text-base leading-7 text-muted-foreground`); no markdown parsing — plain strings only
+- [x] T015 [US3] Wire `<AboutSection about={loaderData.config.about} />` inside `<main>` after `ProjectsSection` in `app/routes/home.tsx`; run `yarn typecheck`
 
 **Checkpoint**: About section renders all paragraphs; layout is readable on mobile and desktop.
 

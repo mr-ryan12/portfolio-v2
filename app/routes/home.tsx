@@ -6,6 +6,7 @@ import SiteHeader from "~/components/site-header";
 import SiteFooter from "~/components/site-footer";
 import HeroSection from "~/components/sections/hero-section";
 import ProjectsSection from "~/components/sections/projects-section";
+import AboutSection from "~/components/sections/about-section";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -40,6 +41,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       <main id="main-content" className="min-h-screen">
         <HeroSection config={config} />
         <ProjectsSection projects={projects} />
+        <AboutSection about={config.about} />
       </main>
       <SiteFooter />
     </>
