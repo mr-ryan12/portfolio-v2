@@ -13,41 +13,51 @@ export default function HeroSection({ config }: HeroSectionProps) {
       aria-labelledby="hero-heading"
       className="py-24 md:py-32"
     >
-      <div className="mx-auto max-w-4xl px-6 md:px-10 lg:px-14">
-        <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6">
-          {config.tagline}
-        </p>
+      <div className="mx-auto max-w-4xl px-6 md:px-10 lg:px-14 flex flex-col-reverse gap-12 md:flex-row md:items-center md:justify-between">
+        <div className="flex-1">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6">
+            {config.tagline}
+          </p>
 
-        <h1
-          id="hero-heading"
-          className="text-5xl md:text-7xl font-semibold tracking-tight text-foreground mb-4"
-        >
-          {config.name}
-        </h1>
+          <h1
+            id="hero-heading"
+            className="text-5xl md:text-7xl font-semibold tracking-tight text-foreground mb-4"
+          >
+            {config.name}
+          </h1>
 
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-          {config.title}
-        </p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+            {config.title}
+          </p>
 
-        <div className="flex flex-wrap gap-2 mb-8">
-          {config.targetRoles.map((role) => (
-            <Badge key={role} variant="outline">
-              {role}
-            </Badge>
-          ))}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {config.targetRoles.map((role) => (
+              <Badge key={role} variant="outline">
+                {role}
+              </Badge>
+            ))}
+          </div>
+
+          <p className="text-base leading-7 text-muted-foreground mb-8 max-w-2xl">
+            {config.about.headline}
+          </p>
+
+          <div className="flex flex-wrap gap-3 mt-8">
+            <Button asChild variant="default">
+              <a href="#projects">View My Work</a>
+            </Button>
+            <Button asChild variant="outline">
+              <a href="#contact">Get In Touch</a>
+            </Button>
+          </div>
         </div>
 
-        <p className="text-base leading-7 text-muted-foreground mb-8 max-w-2xl">
-          {config.about.headline}
-        </p>
-
-        <div className="flex flex-wrap gap-3 mt-8">
-          <Button asChild variant="default">
-            <a href="#projects">View My Work</a>
-          </Button>
-          <Button asChild variant="outline">
-            <a href="#contact">Get In Touch</a>
-          </Button>
+        <div className="shrink-0 flex justify-center md:justify-end">
+          <img
+            src="/images/headshot.jpg"
+            alt={`${config.name} headshot`}
+            className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover object-top ring-2 ring-border"
+          />
         </div>
       </div>
     </section>
