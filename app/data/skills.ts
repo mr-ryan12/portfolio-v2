@@ -26,6 +26,7 @@ export const skillGroups: SkillGroup[] = [
     technologies: [
       getTechnology("nodejs"),
       getTechnology("postgresql"),
+      getTechnology("prisma"),
       getTechnology("react-router"),
     ],
   },
