@@ -54,8 +54,8 @@
 
 **Independent Test**: Open the homepage, read only the hero section without scrolling, and confirm a stranger can describe who the engineer is, what they do, and what roles they're targeting. Verify layout is polished at all viewport widths.
 
-- [ ] T010 [US1] Create `app/components/sections/hero-section.tsx` — props: `{ config: SiteConfig }`; structure: `<section id="hero" aria-labelledby="hero-heading">`; elements top-down: eyebrow label (tagline, `text-sm uppercase tracking-[0.2em] text-muted-foreground`), `<h1 id="hero-heading">` with `config.name`, professional identity line (`config.title`), `config.targetRoles` displayed as `Badge` components (one per role), value proposition paragraph (`config.tagline`, `text-muted-foreground`), CTA group: primary `Button` ("View My Work" → `#projects`) and outline `Button` ("Get In Touch" → `#contact`); typography-only, no images
-- [ ] T011 [US1] Wire `<HeroSection config={loaderData.config} />` inside `<main id="main-content">` in `app/routes/home.tsx`; run `yarn typecheck`
+- [x] T010 [US1] Create `app/components/sections/hero-section.tsx` — props: `{ config: SiteConfig }`; structure: `<section id="hero" aria-labelledby="hero-heading">`; elements top-down: eyebrow label (tagline, `text-sm uppercase tracking-[0.2em] text-muted-foreground`), `<h1 id="hero-heading">` with `config.name`, professional identity line (`config.title`), `config.targetRoles` displayed as `Badge` components (one per role), value proposition paragraph (`config.tagline`, `text-muted-foreground`), CTA group: primary `Button` ("View My Work" → `#projects`) and outline `Button` ("Get In Touch" → `#contact`); typography-only, no images
+- [x] T011 [US1] Wire `<HeroSection config={loaderData.config} />` inside `<main id="main-content">` in `app/routes/home.tsx`; run `yarn typecheck`
 
 **Checkpoint**: Hero section renders data from `siteConfig` and is readable above the fold on mobile and desktop.
 
