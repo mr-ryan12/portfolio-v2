@@ -1,10 +1,6 @@
 import * as React from "react";
 import { Menu } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "~/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
 import { Button } from "~/components/ui/button";
 
 interface NavLink {
@@ -22,6 +18,13 @@ const NAV_LINKS: NavLink[] = [
 const SITE_NAME = "Ryan McBride";
 
 export default function SiteHeader(): React.ReactElement {
+  const handleSiteNameClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-canvas/80 backdrop-blur-md border-b border-border">
       <a
@@ -34,13 +37,17 @@ export default function SiteHeader(): React.ReactElement {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-14">
         <a
           href="/"
+          onClick={(e) => handleSiteNameClick(e)}
           className="text-sm font-semibold text-foreground transition-colors duration-200 hover:text-muted-foreground"
         >
           {SITE_NAME}
         </a>
 
         {/* Desktop nav */}
-        <nav aria-label="Primary navigation" className="hidden md:flex md:items-center md:gap-6">
+        <nav
+          aria-label="Primary navigation"
+          className="hidden md:flex md:items-center md:gap-6"
+        >
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
