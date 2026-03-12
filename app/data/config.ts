@@ -34,7 +34,7 @@ export const siteConfig: SiteConfig = {
   },
   contact: {
     email: "ryan@example.com",
-    linkedin: "https://linkedin.com/in/ryanmcbride",
-    github: "https://github.com/ryanmcbride",
+    linkedin: "https://www.linkedin.com/in/j-ryan-mcbride/",
+    github: "https://github.com/mr-ryan12/",
   },
 };
