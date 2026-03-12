@@ -106,8 +106,8 @@
 
 **Independent Test**: Navigate to the contact section and confirm email, LinkedIn, and GitHub links are all present, clearly visible, and functional. Verify email link opens the native mail client and external links open in a new tab.
 
-- [ ] T018 [US5] Create `app/components/sections/contact-section.tsx` — props: `{ contact: SiteConfigContact }`; structure: `<section id="contact" aria-labelledby="contact-heading">`; centered content block; `<h2 id="contact-heading">` with CTA phrase (e.g., "Let's Work Together"); optional 1-sentence invitation above links; three links as `Button` (ghost or outline variant) with icon + label: email (`mailto:` href, lucide-react `Mail`), LinkedIn (`contact.linkedin`, `target="_blank"`, lucide-react `Linkedin`), GitHub (`contact.github`, `target="_blank"`, lucide-react `Github`); `rel="noopener noreferrer"` on external links
-- [ ] T019 [US5] Wire `<ContactSection contact={loaderData.config.contact} />` inside `<main>` after `SkillsSection` in `app/routes/home.tsx`; run `yarn typecheck`
+- [x] T018 [US5] Create `app/components/sections/contact-section.tsx` — props: `{ contact: SiteConfigContact }`; structure: `<section id="contact" aria-labelledby="contact-heading">`; centered content block; `<h2 id="contact-heading">` with CTA phrase (e.g., "Let's Work Together"); optional 1-sentence invitation above links; three links as `Button` (ghost or outline variant) with icon + label: email (`mailto:` href, lucide-react `Mail`), LinkedIn (`contact.linkedin`, `target="_blank"`, lucide-react `Linkedin`), GitHub (`contact.github`, `target="_blank"`, lucide-react `Github`); `rel="noopener noreferrer"` on external links
+- [x] T019 [US5] Wire `<ContactSection contact={loaderData.config.contact} />` inside `<main>` after `SkillsSection` in `app/routes/home.tsx`; run `yarn typecheck`
 
 **Checkpoint**: All three contact links present; email opens mail client; LinkedIn and GitHub open in new tab.
 
