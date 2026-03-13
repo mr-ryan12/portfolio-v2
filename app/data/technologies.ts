@@ -154,6 +154,17 @@ export const technologies: Technology[] = [
       github: "https://github.com/graphql",
     },
   },
+  {
+    id: "cypress",
+    name: "Cypress",
+    description:
+      "Open-source front-end testing tool built for modern web applications",
+    links: {
+      website: "https://www.cypress.io/",
+      docs: "https://docs.cypress.io/",
+      github: "https://github.com/cypress-io/cypress",
+    },
+  },
 ];
 
 export function getTechnology(id: string): Technology {
