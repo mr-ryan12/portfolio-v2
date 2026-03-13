@@ -1,5 +1,5 @@
-import * as React from "react";
 import { Menu } from "lucide-react";
+import { useNavigate } from "react-router";
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
 import { Button } from "~/components/ui/button";
 
@@ -18,10 +18,11 @@ const NAV_LINKS: NavLink[] = [
 const SITE_NAME = "Ryan McBride";
 
 export default function SiteHeader(): React.ReactElement {
-  const handleSiteNameClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-  ) => {
+  const navigate = useNavigate();
+
+  const handleSiteNameClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    navigate("/", { replace: true, preventScrollReset: true });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
