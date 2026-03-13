@@ -44,7 +44,7 @@ export const projects: Project[] = [
     title: "Spectrum On Demand",
     role: "Software Engineer",
     description:
-      "A customer-facing streaming and content discovery experience for Spectrum TV users, built with React, GraphQL, GatsbyJS, and Strapi CMS to support browsing across movies, TV shows, networks, and on-demand content.",
+      "A customer-facing streaming and content discovery experience for Spectrum TV users, built with React, GraphQL, GatsbyJS, and Strapi CMS.",
     outcome:
       "Contributed to a high-traffic consumer product serving over 1 million monthly visitors, helping deliver a polished and scalable streaming experience for Spectrum customers.",
     technologies: [
