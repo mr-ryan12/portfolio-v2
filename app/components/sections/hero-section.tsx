@@ -26,8 +26,8 @@ export default function HeroSection({ config }: HeroSectionProps) {
             {config.name}
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            {config.title}
+          <p className="text-base leading-7 text-muted-foreground mb-6">
+            {config.about.headline}
           </p>
 
           <div className="flex flex-wrap gap-2 mb-8">
@@ -37,10 +37,6 @@ export default function HeroSection({ config }: HeroSectionProps) {
               </Badge>
             ))}
           </div>
-
-          <p className="text-base leading-7 text-muted-foreground mb-8 max-w-2xl">
-            {config.about.headline}
-          </p>
 
           <div className="flex flex-wrap gap-3 mt-8">
             <Button asChild variant="default">
