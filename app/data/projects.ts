@@ -23,7 +23,8 @@ export const projects: Project[] = [
     id: "ai-chat",
     title: "AI Chatbot",
     role: "Software Engineer",
-    description: "An AI Chatbot powered by the OpenAI SDK.",
+    description:
+      "Designed to combine chat, document ingestion, and retrieval into a usable end-to-end web application.",
     outcome:
       "A Remix-based chat application with document ingestion and vector search capabilities using OpenAI and PostgreSQL with pgvector.",
     technologies: [
