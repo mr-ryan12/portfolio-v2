@@ -15,7 +15,8 @@ export const technologies: Technology[] = [
   {
     id: "typescript",
     name: "TypeScript",
-    description: "Strongly typed programming language that builds on JavaScript.",
+    description:
+      "Strongly typed programming language that builds on JavaScript.",
     links: {
       website: "https://www.typescriptlang.org",
       docs: "https://www.typescriptlang.org/docs",
@@ -84,7 +85,8 @@ export const technologies: Technology[] = [
   {
     id: "docker",
     name: "Docker",
-    description: "Platform for building, shipping, and running containerized applications.",
+    description:
+      "Platform for building, shipping, and running containerized applications.",
     links: {
       website: "https://www.docker.com",
       docs: "https://docs.docker.com",
@@ -94,7 +96,8 @@ export const technologies: Technology[] = [
   {
     id: "git",
     name: "Git",
-    description: "Distributed version control system for tracking code changes.",
+    description:
+      "Distributed version control system for tracking code changes.",
     links: {
       website: "https://git-scm.com",
       docs: "https://git-scm.com/doc",
@@ -119,6 +122,36 @@ export const technologies: Technology[] = [
       website: "https://vitejs.dev",
       docs: "https://vitejs.dev/guide",
       github: "https://github.com/vitejs/vite",
+    },
+  },
+  {
+    id: "gatsby",
+    name: "GatsbyJS",
+    description: "React based static site generator",
+    links: {
+      website: "https://www.gatsbyjs.com/",
+      docs: "https://www.gatsbyjs.com/docs/",
+      github: "https://github.com/gatsbyjs/gatsby",
+    },
+  },
+  {
+    id: "strapi",
+    name: "Strapi",
+    description: "Node.js-based headless Content Management System",
+    links: {
+      website: "https://strapi.io/",
+      docs: "https://docs.strapi.io/",
+      github: "https://github.com/strapi/strapi",
+    },
+  },
+  {
+    id: "graphql",
+    name: "GraphQL",
+    description: "Open-source query language for APIs",
+    links: {
+      website: "https://graphql.org/",
+      docs: "https://graphql.org/learn/",
+      github: "https://github.com/graphql",
     },
   },
 ];

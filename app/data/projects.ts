@@ -33,6 +33,7 @@ export const projects: Project[] = [
       getTechnology("tailwindcss"),
       getTechnology("react"),
       getTechnology("postgresql"),
+      getTechnology("vite"),
     ],
     links: {
       repo: "https://github.com/mr-ryan12/ai-chat",
@@ -42,23 +43,21 @@ export const projects: Project[] = [
     order: 1,
   },
   {
-    id: "task-manager",
-    title: "Team Task Manager",
-    role: "Full-Stack Engineer",
+    id: "spectrum-on-demand",
+    title: "Spectrum On Demand",
+    role: "Software Engineer",
     description:
-      "A collaborative task management application with real-time updates, role-based access control, and an audit log. Built with Node.js, PostgreSQL, and React.",
+      "A customer-facing streaming and content discovery experience for Spectrum TV users, built with React, GraphQL, GatsbyJS, and Strapi CMS to support browsing across movies, TV shows, networks, and on-demand content.",
     outcome:
-      "Reduced task coordination overhead for a 12-person team by centralizing work tracking and automated status notifications.",
+      "Contributed to a high-traffic consumer product serving over 1 million monthly visitors, helping deliver a polished and scalable streaming experience for Spectrum customers.",
     technologies: [
       getTechnology("react"),
-      getTechnology("typescript"),
-      getTechnology("nodejs"),
-      getTechnology("postgresql"),
-      getTechnology("docker"),
+      getTechnology("graphql"),
+      getTechnology("gatsby"),
+      getTechnology("strapi"),
     ],
     links: {
-      repo: "https://github.com/mr-ryan12/",
-      demo: "https://github.com/mr-ryan12/",
+      demo: "https://ondemand.spectrum.net/",
     },
     featured: true,
     order: 2,
