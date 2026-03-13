@@ -43,6 +43,16 @@ export const technologies: Technology[] = [
     },
   },
   {
+    id: "remix",
+    name: "Remix",
+    description: "Full-stack framework for React with SSR and data loading.",
+    links: {
+      website: "https://v2.remix.run",
+      docs: "https://v2.remix.run/docs",
+      github: "https://github.com/remix-run/remix",
+    },
+  },
+  {
     id: "nodejs",
     name: "Node.js",
     description: "JavaScript runtime built on V8 for server-side applications.",
