@@ -79,7 +79,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                           rel="noopener noreferrer"
                         >
                           <ExternalLink className="h-4 w-4 mr-1" />
-                          Source
+                          GitHub
                         </a>
                       </Button>
                     )}
