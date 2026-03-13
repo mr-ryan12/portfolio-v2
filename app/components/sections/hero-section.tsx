@@ -52,7 +52,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
           <img
             src="/images/headshot.jpg"
             alt={`${config.name} headshot`}
-            className="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover object-top ring-2 ring-border"
+            className="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover object-top ring-1 ring-border"
           />
         </div>
       </div>
