@@ -11,9 +11,9 @@ export default function HeroSection({ config }: HeroSectionProps) {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="py-24 md:py-32"
+      className="py-20 md:py-30 md:pb-38"
     >
-      <div className="mx-auto max-w-4xl px-6 md:px-10 lg:px-14 flex flex-col-reverse gap-12 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-14 flex flex-col-reverse gap-12 md:flex-row md:items-center md:justify-between">
         <div className="flex-1">
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6">
             {config.tagline}
