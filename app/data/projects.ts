@@ -20,21 +20,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "portfolio-v2",
-    title: "Portfolio Site v2",
+    id: "ai-chat",
+    title: "AI Chatbot",
     role: "Solo Engineer & Designer",
-    description:
-      "A personal portfolio site built with React Router v7 in SSR mode, TailwindCSS v4, and shadcn/ui. Designed mobile-first with a focus on performance and accessibility.",
+    description: "An AI Chatbot powered by the OpenAI SDK.",
     outcome:
-      "Fully server-rendered portfolio with sub-second load times and a clean, typographic design that presents work clearly to potential employers.",
+      "A Remix-based chat application with document ingestion and vector search capabilities using OpenAI and PostgreSQL with pgvector.",
     technologies: [
-      getTechnology("react-router"),
+      getTechnology("remix"),
       getTechnology("typescript"),
+      getTechnology("prisma"),
       getTechnology("tailwindcss"),
       getTechnology("react"),
+      getTechnology("postgresql"),
     ],
     links: {
-      repo: "https://github.com/mr-ryan12/portfolio-v2",
+      repo: "https://github.com/mr-ryan12/ai-chat",
+      demo: "https://ai-chat-production-aae2.up.railway.app/",
     },
     featured: true,
     order: 1,
