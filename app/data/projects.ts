@@ -30,10 +30,7 @@ export const projects: Project[] = [
       getTechnology("remix"),
       getTechnology("typescript"),
       getTechnology("prisma"),
-      getTechnology("tailwindcss"),
-      getTechnology("react"),
       getTechnology("postgresql"),
-      getTechnology("vite"),
     ],
     links: {
       repo: "https://github.com/mr-ryan12/ai-chat",
