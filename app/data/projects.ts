@@ -59,6 +59,24 @@ export const projects: Project[] = [
     featured: true,
     order: 2,
   },
+  {
+    id: "phish",
+    title: "Phish",
+    role: "Software Engineer",
+    description:
+      "A music listening application where users can enjoy listening to songs dating back to 1983.",
+    outcome: "Built a music discovery application focused on searchable listening experiences and catalog browsing.",
+    technologies: [
+      getTechnology("react"),
+      getTechnology("react-router"),
+      getTechnology("cypress"),
+    ],
+    links: {
+      demo: "https://phish-showcase.vercel.app/",
+    },
+    featured: true,
+    order: 3,
+  },
 ];
 
 export const featuredProjects: Project[] = projects
