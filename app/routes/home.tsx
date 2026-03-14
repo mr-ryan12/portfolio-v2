@@ -1,51 +1,55 @@
 import type { Route } from "./+types/home";
+import { siteConfig } from "~/data/config";
+import { featuredProjects } from "~/data/projects";
+import { skillGroups } from "~/data/skills";
+import SiteHeader from "~/components/site-header";
+import SiteFooter from "~/components/site-footer";
+import HeroSection from "~/components/sections/hero-section";
+import ProjectsSection from "~/components/sections/projects-section";
+import AboutSection from "~/components/sections/about-section";
+import SkillsSection from "~/components/sections/skills-section";
+import ContactSection from "~/components/sections/contact-section";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_args: Route.MetaArgs) {
+  const pageTitle = `${siteConfig.name} — ${siteConfig.title}`;
+  const description = siteConfig.tagline;
+
   return [
-    { title: "Ryan McBride | Full-Stack Software Engineer" },
-    {
-      name: "description",
-      content:
-        "Portfolio of Ryan McBride, a full-stack software engineer building polished, modern web applications.",
-    },
+    { title: pageTitle },
+    { name: "description", content: description },
+    { property: "og:title", content: pageTitle },
+    { property: "og:description", content: description },
+    { property: "og:type", content: "website" },
   ];
 }
 
-export default function Home() {
+export async function loader({}: Route.LoaderArgs) {
+  try {
+    return {
+      config: siteConfig,
+      projects: featuredProjects,
+      skillGroups,
+    };
+  } catch (e) {
+    console.error('Error in loader: ', e)
+    throw new Response("Failed to load page data", { status: 500 });
+  }
+}
+
+export default function Home({ loaderData }: Route.ComponentProps) {
+  const { config, projects, skillGroups } = loaderData;
+
   return (
-    <main className="min-h-screen bg-[#060816] text-white">
-      <section className="mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-14">
-        <div className="max-w-4xl">
-          <p className="text-sm uppercase tracking-[0.2em] text-white/50">
-            Full-Stack Software Engineer
-          </p>
-
-          <h1 className="mt-6 text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-            Design-minded engineering.{" "}
-            <span className="text-white/60">Real-world impact.</span>
-          </h1>
-
-          <p className="mt-6 max-w-2xl text-base leading-8 text-white/70 md:text-lg">
-            I build modern web applications with a focus on usability,
-            performance, and maintainable systems.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-950"
-            >
-              View Selected Work
-            </a>
-            <a
-              href="/resume"
-              className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white"
-            >
-              Resume
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
+    <>
+      <SiteHeader />
+      <main id="main-content" className="min-h-screen">
+        <HeroSection config={config} />
+        <ProjectsSection projects={projects} />
+        <AboutSection about={config.about} />
+        <SkillsSection skillGroups={skillGroups} />
+        <ContactSection contact={config.contact} />
+      </main>
+      <SiteFooter />
+    </>
   );
 }
