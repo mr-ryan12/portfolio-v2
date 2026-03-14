@@ -18,8 +18,8 @@ export default function ContactSection({ contact }: ContactSectionProps) {
       id="contact"
       aria-labelledby="contact-heading"
       className={cn(
-        "py-20 md:py-28 transition-[opacity,transform] duration-[600ms] ease-out",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3",
+        "py-20 md:py-28 transition-[opacity,translate] duration-[600ms] ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
       )}
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">

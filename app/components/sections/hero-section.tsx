@@ -17,8 +17,8 @@ export default function HeroSection({ config }: HeroSectionProps) {
       id="hero"
       aria-labelledby="hero-heading"
       className={cn(
-        "py-20 md:py-30 md:pb-40 transition-[opacity,transform] duration-600ms ease-out",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3",
+        "py-20 md:py-30 md:pb-40 transition-[opacity,translate] duration-[600ms] ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
       )}
     >
       <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-14 flex flex-col-reverse gap-12 md:flex-row md:items-center md:justify-between">
