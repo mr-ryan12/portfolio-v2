@@ -165,6 +165,136 @@ export const technologies: Technology[] = [
       github: "https://github.com/cypress-io/cypress",
     },
   },
+  {
+    id: "tanstack-query",
+    name: "TanStack Query",
+    description:
+      "Powerful asynchronous state management, server-state utilities and data fetching",
+    links: {
+      website: "https://tanstack.com/query/latest",
+      docs: "https://tanstack.com/query/latest/docs/framework/react/overview",
+      github: "https://github.com/TanStack/query",
+    },
+  },
+  {
+    id: "redis",
+    name: "Redis",
+    description:
+      "An open-source, in-memory, NoSQL key-value data store used as a cache, database, and message broker",
+    links: {
+      website: "https://redis.io/",
+      docs: "https://redis.io/docs/latest/",
+      github: "https://github.com/redis/redis",
+    },
+  },
+  {
+    id: "agile",
+    name: "Agile",
+    description:
+      "Project management framework that breaks projects into smaller phases so teams can adapt as they go and keep improving",
+    links: {
+      website: "https://agilealliance.org/",
+      docs: "https://agilealliance.org/agile101/",
+    },
+  },
+  {
+    id: "oop",
+    name: "OOP",
+    description:
+      "A programming paradigm that organizes code around objects, which are data fields with unique attributes and behaviors",
+    links: {},
+  },
+  {
+    id: "tdd",
+    name: "TDD",
+    description: `A practice where developers write automated tests before writing the actual functional code, following a "Red-Green-Refactor" cycle`,
+    links: {},
+  },
+  {
+    id: "sdd",
+    name: "Spec-Driven Dev",
+    description:
+      "Engineering approach where structured specifications are the primary artifact, created before implementation to define behavioral constraints",
+    links: {},
+  },
+  {
+    id: "vuejs",
+    name: "Vue.js",
+    description:
+      "An approachable, performant and versatile framework for building web user interfaces.",
+    links: {
+      website: "https://vuejs.org/",
+      docs: "https://vuejs.org/guide/introduction.html",
+      github: "https://github.com/vuejs",
+    },
+  },
+  {
+    id: "jest",
+    name: "Jest",
+    description:
+      "An open-source JavaScript testing framework designed to ensure the correctness and quality of any JavaScript or TypeScript codebase",
+    links: {
+      website: "https://jestjs.io/",
+      docs: "https://jestjs.io/docs/getting-started",
+      github: "https://github.com/jestjs/jest",
+    },
+  },
+  {
+    id: "vitest",
+    name: "Vitest",
+    description:
+      "A modern JavaScript unit testing framework powered by Vite, designed to be a lightweight, Jest-compatible alternative",
+    links: {
+      website: "https://vitest.dev/",
+      docs: "https://vitest.dev/guide/",
+      github: "https://github.com/vitest-dev/vitest",
+    },
+  },
+  {
+    id: "claude-code",
+    name: "Claude Code",
+    description:
+      "Anthropic's agentic AI coding tool that operates in the terminal and understands entire codebases.",
+    links: {
+      website: "https://claude.ai/code",
+      docs: "https://docs.anthropic.com/en/docs/claude-code/overview",
+    },
+  },
+  {
+    id: "kiro",
+    name: "Kiro",
+    description:
+      "Amazon's AI-powered IDE featuring spec-driven development with autonomous coding agents.",
+    links: {
+      website: "https://kiro.dev",
+    },
+  },
+  {
+    id: "openai-api",
+    name: "OpenAI API",
+    description:
+      "REST API for accessing OpenAI's language and reasoning models for AI-powered application development.",
+    links: {
+      website: "https://openai.com",
+      docs: "https://platform.openai.com/docs",
+    },
+  },
+  {
+    id: "rag",
+    name: "RAG",
+    description:
+      "Retrieval-Augmented Generation — a pattern for grounding LLM responses with external knowledge sources at inference time.",
+    links: {},
+  },
+  {
+    id: "speckit",
+    name: "SpecKit",
+    description:
+      "Spec-driven development workflow toolkit for AI-assisted feature planning, specification, and implementation.",
+    links: {
+      github: "https://github.com/github/spec-kit",
+    },
+  },
 ];
 
 export function getTechnology(id: string): Technology {

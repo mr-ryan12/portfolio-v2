@@ -15,15 +15,18 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
         >
           Skills &amp; Toolbox
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 md:items-start">
           {skillGroups.map((group) => (
-            <div key={group.id}>
+            <div
+              key={group.id}
+              className="rounded-xl border border-border bg-card p-6"
+            >
               <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">
                 {group.label}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {group.technologies.map((tech) => (
-                  <Badge key={tech.id} variant="secondary">
+                  <Badge key={tech.id} variant="secondary" className="border-white/10">
                     {tech.name}
                   </Badge>
                 ))}
