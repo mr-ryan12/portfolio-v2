@@ -17,10 +17,20 @@ export default function HeroSection({ config }: HeroSectionProps) {
       id="hero"
       aria-labelledby="hero-heading"
       className={cn(
-        "py-20 md:py-30 md:pb-40 transition-[opacity,translate] duration-[600ms] ease-out",
+        "relative overflow-hidden py-20 md:py-30 md:pb-40 transition-[opacity,translate] duration-[600ms] ease-out",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
       )}
     >
+      {/* Radial glow behind portrait */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 h-[700px] w-[700px] md:right-[5%] -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, #0b1022 0%, transparent 70%)",
+          opacity: 0.7,
+        }}
+      />
       <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-14 flex flex-col-reverse gap-12 md:flex-row md:items-center md:justify-between">
         <div className="flex-1">
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6">
