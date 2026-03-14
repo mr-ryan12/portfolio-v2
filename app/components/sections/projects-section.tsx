@@ -36,7 +36,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
             >
               <CardHeader>
                 <h3 className="text-xl font-semibold">{project.title}</h3>
-                <Badge variant="outline" className="w-fit mt-1">
+                <Badge variant="outline" className="w-fit mt-1 border-white/25">
                   {project.role}
                 </Badge>
               </CardHeader>
@@ -51,7 +51,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
               <CardFooter className="flex flex-col items-start gap-3">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech.id} variant="secondary">
+                    <Badge key={tech.id} variant="secondary" className="border-white/10">
                       {tech.name}
                     </Badge>
                   ))}

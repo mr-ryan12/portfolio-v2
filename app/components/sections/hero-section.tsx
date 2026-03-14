@@ -32,7 +32,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
 
           <div className="flex flex-wrap gap-2 mb-8">
             {config.targetRoles.map((role) => (
-              <Badge key={role} variant="outline">
+              <Badge key={role} variant="outline" className="border-white/25">
                 {role}
               </Badge>
             ))}
