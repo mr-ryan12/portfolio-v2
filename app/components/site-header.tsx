@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Menu } from "lucide-react";
 import { useNavigate } from "react-router";
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
@@ -19,6 +20,7 @@ const SITE_NAME = "Ryan McBride";
 
 export default function SiteHeader(): React.ReactElement {
   const navigate = useNavigate();
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const handleSiteNameClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -61,7 +63,7 @@ export default function SiteHeader(): React.ReactElement {
         </nav>
 
         {/* Mobile nav trigger */}
-        <Sheet>
+        <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
           <SheetTrigger asChild>
             <Button
               variant="ghost"
@@ -81,6 +83,7 @@ export default function SiteHeader(): React.ReactElement {
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={() => setMobileNavOpen(false)}
                   className="text-base font-medium text-foreground transition-colors duration-200 hover:text-muted-foreground"
                 >
                   {link.label}
