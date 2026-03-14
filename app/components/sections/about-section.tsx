@@ -6,7 +6,11 @@ interface AboutSectionProps {
 
 export default function AboutSection({ about }: AboutSectionProps) {
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-20 md:py-28">
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="py-20 md:py-28"
+    >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div>
@@ -33,17 +37,19 @@ export default function AboutSection({ about }: AboutSectionProps) {
             <div className="flex flex-col gap-4">
               <div className="rounded-xl bg-surface-muted p-4 border border-border">
                 <p className="text-sm text-muted-foreground leading-6">
-                  Full-stack development across modern web stacks — from data modeling to production UI.
+                  Building across the stack, from data models to polished UI
                 </p>
               </div>
               <div className="rounded-xl bg-surface-muted p-4 border border-border">
                 <p className="text-sm text-muted-foreground leading-6">
-                  Strong focus on type safety, clean architecture, and maintainable systems.
+                  Strong focus on type safety, clean architecture, and
+                  maintainable systems.
                 </p>
               </div>
               <div className="rounded-xl bg-surface-muted p-4 border border-border">
                 <p className="text-sm text-muted-foreground leading-6">
-                  Design-conscious approach — shipping interfaces that are both correct and polished.
+                  Design-conscious approach — shipping interfaces that are both
+                  correct and polished.
                 </p>
               </div>
             </div>
