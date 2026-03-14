@@ -32,7 +32,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
           {projects.map((project) => (
             <Card
               key={project.id}
-              className="flex flex-col transition-transform duration-200 hover:-translate-y-1"
+              className="flex flex-col bg-surface transition-transform duration-200 hover:-translate-y-1"
             >
               <CardHeader>
                 <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -48,10 +48,10 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                 </p>
               </CardContent>
 
-              <CardFooter className="flex flex-col items-start gap-3">
+              <CardFooter className="flex flex-col items-start gap-3 bg-surface-muted border-white/10">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech.id} variant="secondary" className="border-white/10">
+                    <Badge key={tech.id} variant="outline" className="bg-surface-muted border-white/25">
                       {tech.name}
                     </Badge>
                   ))}

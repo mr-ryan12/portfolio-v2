@@ -19,14 +19,14 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
           {skillGroups.map((group) => (
             <div
               key={group.id}
-              className="rounded-xl border border-border bg-card p-6"
+              className="rounded-xl border border-border bg-surface p-6"
             >
               <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">
                 {group.label}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {group.technologies.map((tech) => (
-                  <Badge key={tech.id} variant="secondary" className="border-white/10">
+                  <Badge key={tech.id} variant="outline" className="bg-surface-muted border-white/25">
                     {tech.name}
                   </Badge>
                 ))}
