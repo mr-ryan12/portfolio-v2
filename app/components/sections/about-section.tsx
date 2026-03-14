@@ -15,7 +15,7 @@ export default function AboutSection({ about }: AboutSectionProps) {
       id="about"
       aria-labelledby="about-heading"
       className={cn(
-        "py-20 md:py-28 transition-[opacity,translate] duration-[600ms] ease-out",
+        "py-20 md:py-28 transition-[opacity,translate] duration-600 ease-out",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
       )}
     >

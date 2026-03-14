@@ -17,7 +17,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
       id="hero"
       aria-labelledby="hero-heading"
       className={cn(
-        "relative overflow-hidden py-20 md:py-30 md:pb-40 transition-[opacity,translate] duration-[600ms] ease-out",
+        "relative overflow-hidden py-20 md:py-30 md:pb-40 transition-[opacity,translate] duration-600 ease-out",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
       )}
     >
