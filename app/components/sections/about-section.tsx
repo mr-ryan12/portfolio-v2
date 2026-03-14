@@ -1,15 +1,23 @@
 import type { SiteConfigAbout } from "~/data/config";
+import { useScrollReveal } from "~/hooks/use-scroll-reveal";
+import { cn } from "~/lib/utils";
 
 interface AboutSectionProps {
   about: SiteConfigAbout;
 }
 
 export default function AboutSection({ about }: AboutSectionProps) {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section
+      ref={ref}
       id="about"
       aria-labelledby="about-heading"
-      className="py-20 md:py-28"
+      className={cn(
+        "py-20 md:py-28 transition-[opacity,transform] duration-[600ms] ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3",
+      )}
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">

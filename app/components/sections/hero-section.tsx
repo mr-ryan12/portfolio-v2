@@ -1,17 +1,25 @@
 import type { SiteConfig } from "~/data/config";
 import { Button } from "~/components/ui/button";
 import { Badge } from "~/components/ui/badge";
+import { useScrollReveal } from "~/hooks/use-scroll-reveal";
+import { cn } from "~/lib/utils";
 
 interface HeroSectionProps {
   config: SiteConfig;
 }
 
 export default function HeroSection({ config }: HeroSectionProps) {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section
+      ref={ref}
       id="hero"
       aria-labelledby="hero-heading"
-      className="py-20 md:py-30 md:pb-38"
+      className={cn(
+        "py-20 md:py-30 md:pb-40 transition-[opacity,transform] duration-600ms ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3",
+      )}
     >
       <div className="mx-auto max-w-5xl px-6 md:px-10 lg:px-14 flex flex-col-reverse gap-12 md:flex-row md:items-center md:justify-between">
         <div className="flex-1">

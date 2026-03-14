@@ -2,14 +2,26 @@ import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "~/components/brand-icons";
 import { Button } from "~/components/ui/button";
 import type { SiteConfigContact } from "~/data/config";
+import { useScrollReveal } from "~/hooks/use-scroll-reveal";
+import { cn } from "~/lib/utils";
 
 interface ContactSectionProps {
   contact: SiteConfigContact;
 }
 
 export default function ContactSection({ contact }: ContactSectionProps) {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="py-20 md:py-28">
+    <section
+      ref={ref}
+      id="contact"
+      aria-labelledby="contact-heading"
+      className={cn(
+        "py-20 md:py-28 transition-[opacity,transform] duration-[600ms] ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3",
+      )}
+    >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         <div className="text-center max-w-2xl mx-auto">
           <h2

@@ -1,13 +1,25 @@
 import type { SkillGroup } from "~/data/skills";
 import { Badge } from "~/components/ui/badge";
+import { useScrollReveal } from "~/hooks/use-scroll-reveal";
+import { cn } from "~/lib/utils";
 
 interface SkillsSectionProps {
   skillGroups: SkillGroup[];
 }
 
 export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
-    <section id="skills" aria-labelledby="skills-heading" className="py-20 md:py-28">
+    <section
+      ref={ref}
+      id="skills"
+      aria-labelledby="skills-heading"
+      className={cn(
+        "py-20 md:py-28 transition-[opacity,transform] duration-[600ms] ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3",
+      )}
+    >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         <h2
           id="skills-heading"
