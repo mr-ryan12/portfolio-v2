@@ -1,6 +1,4 @@
-# Ryan McBride — Portfolio
-
-Personal portfolio site for Ryan McBride, a software engineer based in Denver, CO.
+# Portfolio
 
 **Live site:** [rmcbride.dev](https://rmcbride.dev)
 
