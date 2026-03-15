@@ -10,6 +10,9 @@ import AboutSection from "~/components/sections/about-section";
 import SkillsSection from "~/components/sections/skills-section";
 import ContactSection from "~/components/sections/contact-section";
 
+const SITE_URL = "https://rmcbride.dev";
+const OG_IMAGE_URL = `${SITE_URL}/og/portfolio-preview.jpg`;
+
 export function meta(_args: Route.MetaArgs) {
   const pageTitle = `${siteConfig.name} — ${siteConfig.title}`;
   const description = siteConfig.tagline;
@@ -17,9 +20,17 @@ export function meta(_args: Route.MetaArgs) {
   return [
     { title: pageTitle },
     { name: "description", content: description },
+
     { property: "og:title", content: pageTitle },
     { property: "og:description", content: description },
     { property: "og:type", content: "website" },
+    { property: "og:url", content: SITE_URL },
+    { property: "og:image", content: OG_IMAGE_URL },
+
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: pageTitle },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: OG_IMAGE_URL },
   ];
 }
 
@@ -31,7 +42,7 @@ export async function loader({}: Route.LoaderArgs) {
       skillGroups,
     };
   } catch (e) {
-    console.error('Error in loader: ', e)
+    console.error("Error in loader: ", e);
     throw new Response("Failed to load page data", { status: 500 });
   }
 }
