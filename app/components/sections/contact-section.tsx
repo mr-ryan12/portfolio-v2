@@ -31,12 +31,15 @@ export default function ContactSection({ contact }: ContactSectionProps) {
             Let's Work Together
           </h2>
           <p className="mt-4 text-base leading-7 text-muted-foreground">
-            I'm open to full-stack, frontend, and software engineering roles. Reach out and let's
-            start a conversation.
+            I'm open to full-stack, frontend, and software engineering roles.
+            Reach out and let's start a conversation.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button variant="outline" size="lg" asChild>
-              <a href={`mailto:${contact.email}`} className="flex items-center gap-2">
+              <a
+                href={`mailto:${contact.email}?subject=${encodeURIComponent("Portfolio Inquiry")}`}
+                className="flex items-center gap-2"
+              >
                 <Mail className="h-4 w-4" />
                 Email Me
               </a>
