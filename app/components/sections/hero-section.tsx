@@ -24,7 +24,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
       {/* Radial glow behind portrait */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 h-[700px] w-[700px] md:right-[5%] -z-10"
+        className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 h-175 w-175 md:right-[5%] -z-10"
         style={{
           background:
             "radial-gradient(ellipse at center, #0b1022 0%, transparent 70%)",
