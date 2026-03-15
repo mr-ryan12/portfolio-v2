@@ -36,7 +36,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     id: "tools-workflow",
-    label: "Tools & Workflow",
+    label: "Tools & Methodologies",
     order: 3,
     technologies: [
       getTechnology("git"),
