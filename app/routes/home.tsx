@@ -11,7 +11,7 @@ import SkillsSection from "~/components/sections/skills-section";
 import ContactSection from "~/components/sections/contact-section";
 
 const SITE_URL = "https://rmcbride.dev";
-const OG_IMAGE_URL = `${SITE_URL}/og/portfolio-preview.jpg`;
+const OG_IMAGE_URL = `${SITE_URL}/og/portfolio-preview.png`;
 
 export function meta(_args: Route.MetaArgs) {
   const pageTitle = `${siteConfig.name} — ${siteConfig.title}`;
