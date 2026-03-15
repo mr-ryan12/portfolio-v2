@@ -1,87 +1,61 @@
-# Welcome to React Router!
+# Ryan McBride — Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Personal portfolio site for Ryan McBride, a software engineer based in Denver, CO.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+**Live site:** [rmcbride.dev](https://rmcbride.dev)
 
-## Features
+## Tech Stack
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **React Router v7** — SSR framework mode
+- **TypeScript 5.9** — strict mode
+- **TailwindCSS v4** — CSS-variable-based theming
+- **shadcn/ui** — component library (radix-nova style, neutral base)
+- **Vite** — build tooling
+- **Yarn v4** (Berry) — package manager
 
 ## Getting Started
 
-### Installation
-
-Install the dependencies:
-
 ```bash
-npm install
+yarn install
 ```
 
 ### Development
 
-Start the development server with HMR:
+```bash
+yarn dev
+```
+
+Starts the dev server with HMR at `http://localhost:5173`.
+
+### Type checking
 
 ```bash
-npm run dev
+yarn typecheck
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+### Production build
 
 ```bash
-npm run build
+yarn build
+yarn start
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+app/
+├── components/
+│   ├── sections/     # Page sections (Hero, Projects, About, Skills, Contact)
+│   └── ui/           # shadcn/ui components
+├── data/             # Static data modules (config, projects, skills, technologies)
+├── hooks/            # Custom React hooks
+├── lib/              # Utilities (cn, etc.)
+├── routes/           # React Router route modules
+└── app.css           # Global styles and Tailwind theme tokens
 ```
 
-## Styling
+## Contact
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+- Email: mr.ryan444@gmail.com
+- LinkedIn: [j-ryan-mcbride](https://www.linkedin.com/in/j-ryan-mcbride/)
+- GitHub: [mr-ryan12](https://github.com/mr-ryan12/)
