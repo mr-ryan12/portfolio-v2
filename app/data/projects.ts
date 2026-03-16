@@ -21,7 +21,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "ai-chat",
-    title: "AI Chatbot",
+    title: "ThreadMind",
     role: "Software Engineer",
     description:
       "Designed to combine chat, document ingestion, and retrieval into a usable end-to-end web application.",
@@ -34,8 +34,8 @@ export const projects: Project[] = [
       getTechnology("postgresql"),
     ],
     links: {
-      repo: "https://github.com/mr-ryan12/ai-chat",
-      demo: "https://ai-chat-production-aae2.up.railway.app/",
+      repo: "https://github.com/mr-ryan12/threadmind",
+      demo: "https://threadmind.dev/",
     },
     featured: true,
     order: 1,
