@@ -21,7 +21,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "ai-chat",
-    title: "AI Chatbot",
+    title: "ThreadMind",
     role: "Software Engineer",
     description:
       "Designed to combine chat, document ingestion, and retrieval into a usable end-to-end web application.",
