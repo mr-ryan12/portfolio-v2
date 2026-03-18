@@ -45,12 +45,12 @@ export default function HeroSection({ config }: HeroSectionProps) {
           </h1>
 
           <p className="text-base leading-7 text-muted-foreground mb-6">
-            {config.about.headline}
+            {config.heroHeadline}
           </p>
 
           <div className="flex flex-wrap gap-2 mb-8">
             {config.targetRoles.map((role) => (
-              <Badge key={role} variant="outline" className="border-white/25">
+              <Badge key={role} variant="outline" className="border-white/25 text-[#4d98a2]">
                 {role}
               </Badge>
             ))}
