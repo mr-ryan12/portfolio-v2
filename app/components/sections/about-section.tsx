@@ -45,8 +45,8 @@ export default function AboutSection({ about }: AboutSectionProps) {
             <div className="flex flex-col gap-4">
               <div className="rounded-xl bg-surface-muted p-4 border border-border">
                 <p className="text-sm text-muted-foreground leading-6">
-                  Experience spanning application architecture, APIs, data
-                  modeling, and UI.
+                  Full-stack experience spanning application architecture, APIs,
+                  data modeling, and UI.
                 </p>
               </div>
               <div className="rounded-xl bg-surface-muted p-4 border border-border">
@@ -57,8 +57,8 @@ export default function AboutSection({ about }: AboutSectionProps) {
               </div>
               <div className="rounded-xl bg-surface-muted p-4 border border-border">
                 <p className="text-sm text-muted-foreground leading-6">
-                  Design-conscious approach focused on shipping interfaces that
-                  are both polished and reliable.
+                  Product-conscious approach. Ship interfaces that are
+                  polished, usable, and built on sound engineering decisions.
                 </p>
               </div>
             </div>
