@@ -36,6 +36,11 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
               <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">
                 {group.label}
               </h3>
+              {group.description && (
+                <p className="text-sm leading-6 text-muted-foreground mb-4">
+                  {group.description}
+                </p>
+              )}
               <div className="flex flex-wrap gap-2">
                 {group.technologies.map((tech) => (
                   <Badge key={tech.id} variant="outline" className="bg-surface-muted border-white/25">

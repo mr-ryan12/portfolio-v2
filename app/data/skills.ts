@@ -4,6 +4,7 @@ import { getTechnology } from "~/data/technologies";
 export interface SkillGroup {
   id: string;
   label: string;
+  description?: string;
   order: number;
   technologies: Technology[];
 }
@@ -52,6 +53,8 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "agentic-workflow",
     label: "Agentic Workflow",
+    description:
+      "I use tools like Claude Code, Kiro, and SpecKit as collaborators that help me build more intentionally — from exploration and planning through implementation.",
     order: 4,
     technologies: [
       getTechnology("claude-code"),
