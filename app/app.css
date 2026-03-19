@@ -12,6 +12,7 @@
   --color-canvas: #060816;
   --color-surface: #0b1022;
   --color-surface-muted: #11172a;
+  --gradient-timeline: linear-gradient(180deg, #6366f1, #8b5cf6, #a78bfa);
 }
 
 html,
