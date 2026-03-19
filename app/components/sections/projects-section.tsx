@@ -37,10 +37,18 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Card
               key={project.id}
-              className="flex flex-col bg-surface transition-transform duration-200 hover:-translate-y-1"
+              className={cn(
+                "flex flex-col bg-surface hover:-translate-y-1 transition-[opacity,translate] duration-500 ease-out",
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6",
+              )}
+              style={{
+                transitionDelay: isVisible ? `${index * 150}ms` : "0ms",
+              }}
             >
               <CardHeader>
                 <h3 className="text-xl font-semibold">{project.title}</h3>
