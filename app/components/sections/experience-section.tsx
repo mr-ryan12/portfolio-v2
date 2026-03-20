@@ -130,7 +130,7 @@ export default function ExperienceSection({
                 <div key={experience.id} className="relative pl-12 md:pl-14">
                   {/* Connecting line between entries */}
                   {!isLast && (
-                    <div className="absolute left-3.75 top-10 bottom-0 w-0.5 bg-border md:left-4.25">
+                    <div className="absolute left-3.75 top-[32px] bottom-0 w-0.5 bg-border md:left-4.25 md:top-[36px]">
                       <div
                         className="w-full origin-top rounded-full"
                         style={{
