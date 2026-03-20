@@ -4,6 +4,7 @@ import { getTechnology } from "~/data/technologies";
 export interface SkillGroup {
   id: string;
   label: string;
+  description?: string;
   order: number;
   technologies: Technology[];
 }
@@ -51,7 +52,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     id: "agentic-workflow",
-    label: "Agentic Workflow",
+    label: "Agentic Tooling",
     order: 4,
     technologies: [
       getTechnology("claude-code"),

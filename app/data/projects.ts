@@ -24,9 +24,9 @@ export const projects: Project[] = [
     title: "ThreadMind",
     role: "Software Engineer",
     description:
-      "Designed to combine chat, document ingestion, and retrieval into a usable end-to-end web application.",
+      "Built to move beyond the surface-level buzz around AI tooling and understand the architecture firsthand, including vector storage, embeddings, similarity search, and document ingestion. I chose pgvector over a dedicated vector database so I could explore semantic retrieval within a simpler PostgreSQL-based stack.",
     outcome:
-      "A Remix-based chat application with document ingestion and vector search capabilities using OpenAI and PostgreSQL with pgvector.",
+      "The hardest part was making it feel like a real product instead of just a simple chat app. Upload, ingestion, chunking, embeddings, retrieval, and chat all had to work together in a way that felt cohesive.",
     technologies: [
       getTechnology("remix"),
       getTechnology("typescript"),
@@ -43,11 +43,11 @@ export const projects: Project[] = [
   {
     id: "spectrum-on-demand",
     title: "Spectrum On Demand",
-    role: "Software Engineer",
+    role: "Technical Lead",
     description:
-      "A customer-facing streaming and content discovery experience for Spectrum TV users, built with React, GraphQL, GatsbyJS, and Strapi CMS.",
+      "Served as technical lead on a high-traffic consumer streaming product at Charter Communications, supporting over 1 million monthly visitors. I integrated live TV streaming from the Networks page into Spectrum's external Live TV application and implemented analytics tracking to better understand how users interacted with the platform.",
     outcome:
-      "Contributed to a high-traffic consumer product serving over 1 million monthly visitors, helping deliver a polished and scalable streaming experience for Spectrum customers.",
+      "The interesting part was working at scale and making product decisions that connected user experience with measurable behavior on a platform where changes reached a large audience immediately.",
     technologies: [
       getTechnology("react"),
       getTechnology("graphql"),
@@ -65,9 +65,9 @@ export const projects: Project[] = [
     title: "Phish",
     role: "Software Engineer",
     description:
-      "A music listening application where users can enjoy listening to songs dating back to 1983.",
+      "A frontend product showcase built around music discovery and interaction design, not just a generic music player. I wanted to create an experience where users could explore a deep catalog of Phish's music in a way that felt fast, clear, and easy to navigate.",
     outcome:
-      "Built a music discovery application focused on searchable listening experiences and catalog browsing.",
+      "Built in about three days under a compressed timeline, the project's strongest point is its frontend thinking and product direction: polished client-side discovery, playlist-style interaction, and a focus on making the experience feel intentional despite the tight scope.",
     technologies: [
       getTechnology("react"),
       getTechnology("react-router"),

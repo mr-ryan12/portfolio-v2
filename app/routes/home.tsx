@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { siteConfig } from "~/data/config";
+import { experiences } from "~/data/experience";
 import { featuredProjects } from "~/data/projects";
 import { skillGroups } from "~/data/skills";
 import SiteHeader from "~/components/site-header";
@@ -7,6 +8,7 @@ import SiteFooter from "~/components/site-footer";
 import HeroSection from "~/components/sections/hero-section";
 import ProjectsSection from "~/components/sections/projects-section";
 import AboutSection from "~/components/sections/about-section";
+import ExperienceSection from "~/components/sections/experience-section";
 import SkillsSection from "~/components/sections/skills-section";
 import ContactSection from "~/components/sections/contact-section";
 
@@ -38,6 +40,7 @@ export async function loader({}: Route.LoaderArgs) {
   try {
     return {
       config: siteConfig,
+      experiences,
       projects: featuredProjects,
       skillGroups,
     };
@@ -48,7 +51,7 @@ export async function loader({}: Route.LoaderArgs) {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  const { config, projects, skillGroups } = loaderData;
+  const { config, experiences, projects, skillGroups } = loaderData;
 
   return (
     <>
@@ -57,6 +60,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         <HeroSection config={config} />
         <ProjectsSection projects={projects} />
         <AboutSection about={config.about} />
+        <ExperienceSection experiences={experiences} />
         <SkillsSection skillGroups={skillGroups} />
         <ContactSection contact={config.contact} />
       </main>

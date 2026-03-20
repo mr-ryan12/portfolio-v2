@@ -7,6 +7,7 @@ skills:
   - react-router-expert
   - typescript-expert
   - ui-ux-expert
+  - frontend-design
 ---
 
 You are a senior fullstack TypeScript developer working on this React Router v7 (SSR) portfolio site for Ryan McBride.

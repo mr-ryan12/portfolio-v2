@@ -12,6 +12,9 @@
   --color-canvas: #060816;
   --color-surface: #0b1022;
   --color-surface-muted: #11172a;
+  --color-accent-violet: #8b5cf6;
+  --gradient-timeline: linear-gradient(180deg, #6366f1, #8b5cf6, #a78bfa);
+  --gradient-glow: conic-gradient(from 180deg, #6366f1, #8b5cf6, #a78bfa, #6366f1);
 }
 
 html,
@@ -24,7 +27,7 @@ html {
 }
 
 body {
-  @apply bg-[#060816] text-white font-sans;
+  @apply bg-canvas text-white font-sans;
 }
 
 :root {
@@ -74,7 +77,7 @@ body {
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
+  --muted-foreground: oklch(0.76 0 0);
   --accent: oklch(0.371 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);

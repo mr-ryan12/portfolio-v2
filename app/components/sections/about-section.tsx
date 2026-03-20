@@ -43,22 +43,25 @@ export default function AboutSection({ about }: AboutSectionProps) {
               Engineer Background
             </p>
             <div className="flex flex-col gap-4">
-              <div className="rounded-xl bg-surface-muted p-4 border border-border">
+              <div className="relative rounded-xl bg-surface-muted p-4 pl-5 ring-1 ring-foreground/10 overflow-hidden">
+                <div aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl bg-accent-violet/40" />
                 <p className="text-sm text-muted-foreground leading-6">
-                  Experience spanning application architecture, APIs, data
-                  modeling, and UI.
+                  Full-stack experience spanning application architecture, APIs,
+                  data modeling, and UI.
                 </p>
               </div>
-              <div className="rounded-xl bg-surface-muted p-4 border border-border">
+              <div className="relative rounded-xl bg-surface-muted p-4 pl-5 ring-1 ring-foreground/10 overflow-hidden">
+                <div aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl bg-accent-violet/40" />
                 <p className="text-sm text-muted-foreground leading-6">
                   Strong focus on type safety, clean architecture, and
                   maintainable systems.
                 </p>
               </div>
-              <div className="rounded-xl bg-surface-muted p-4 border border-border">
+              <div className="relative rounded-xl bg-surface-muted p-4 pl-5 ring-1 ring-foreground/10 overflow-hidden">
+                <div aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl bg-accent-violet/40" />
                 <p className="text-sm text-muted-foreground leading-6">
-                  Design-conscious approach focused on shipping interfaces that
-                  are both polished and reliable.
+                  Product-conscious approach to building software that is polished,
+                  usable, and intuitive.
                 </p>
               </div>
             </div>
