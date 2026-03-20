@@ -52,9 +52,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     id: "agentic-workflow",
-    label: "Agentic Workflow",
-    description:
-      "I use tools like Claude Code, Kiro, and SpecKit as collaborators that help me build more intentionally — from exploration and planning through implementation.",
+    label: "Agentic Tooling",
     order: 4,
     technologies: [
       getTechnology("claude-code"),

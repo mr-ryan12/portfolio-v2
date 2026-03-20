@@ -27,6 +27,10 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
         >
           Skills &amp; Toolbox
         </h2>
+        <p className="text-base leading-7 text-muted-foreground mt-4 max-w-2xl">
+          I work across frontend, backend, and modern development workflows,
+          including AI-assisted tools that help me build more intentionally.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 md:items-start">
           {skillGroups.map((group, index) => (
             <div
@@ -44,14 +48,13 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
               <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">
                 {group.label}
               </h3>
-              {group.description && (
-                <p className="text-sm leading-6 text-muted-foreground mb-4">
-                  {group.description}
-                </p>
-              )}
               <div className="flex flex-wrap gap-2">
                 {group.technologies.map((tech) => (
-                  <Badge key={tech.id} variant="outline" className="bg-surface-muted border-white/25">
+                  <Badge
+                    key={tech.id}
+                    variant="outline"
+                    className="bg-surface-muted border-white/25"
+                  >
                     {tech.name}
                   </Badge>
                 ))}
