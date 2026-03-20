@@ -112,9 +112,9 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
 
                 {/* Right column — narrative */}
                 <div className="p-6 md:w-[62%] md:py-8 md:pr-8 md:pl-6 flex flex-col justify-center">
-                  <p className="font-medium leading-7">{project.outcome}</p>
+                  <p className="font-medium leading-7">{project.description}</p>
                   <p className="text-sm text-muted-foreground mt-3 leading-6">
-                    {project.description}
+                    {project.outcome}
                   </p>
                 </div>
               </div>
