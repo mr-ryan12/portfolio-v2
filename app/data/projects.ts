@@ -65,9 +65,9 @@ export const projects: Project[] = [
     title: "Phish",
     role: "Software Engineer",
     description:
-      "A frontend product showcase built around music discovery and interaction design — not just a generic music player. I wanted to create an experience where users could browse and engage with a deep catalog of content in a way that felt fast, clear, and usable.",
+      "A frontend product showcase built around music discovery and interaction design, not just a generic music player. I wanted to create an experience where users could explore a deep catalog of Phish's music in a way that felt fast, clear, and easy to navigate.",
     outcome:
-      "Built in about three days under a compressed timeline, so the strongest part is the frontend thinking and product direction: polished client-side discovery, playlist-style interaction, and a focus on making the experience feel intentional despite the tight scope.",
+      "Built in about three days under a compressed timeline, the project's strongest point is its frontend thinking and product direction: polished client-side discovery, playlist-style interaction, and a focus on making the experience feel intentional despite the tight scope.",
     technologies: [
       getTechnology("react"),
       getTechnology("react-router"),
