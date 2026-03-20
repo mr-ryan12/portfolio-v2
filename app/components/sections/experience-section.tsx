@@ -160,7 +160,7 @@ export default function ExperienceSection({
                     )}
                     style={{
                       borderColor: itemVisible
-                        ? "#8b5cf6"
+                        ? "var(--color-accent-violet)"
                         : undefined,
                     }}
                   >
@@ -168,7 +168,7 @@ export default function ExperienceSection({
                       className={cn(
                         "size-4 transition-colors duration-500 md:size-[18px]",
                         itemVisible
-                          ? "text-[#8b5cf6]"
+                          ? "text-accent-violet"
                           : "text-muted-foreground",
                       )}
                       aria-hidden="true"

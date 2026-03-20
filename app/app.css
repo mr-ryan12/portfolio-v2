@@ -12,7 +12,9 @@
   --color-canvas: #060816;
   --color-surface: #0b1022;
   --color-surface-muted: #11172a;
+  --color-accent-violet: #8b5cf6;
   --gradient-timeline: linear-gradient(180deg, #6366f1, #8b5cf6, #a78bfa);
+  --gradient-glow: conic-gradient(from 180deg, #6366f1, #8b5cf6, #a78bfa, #6366f1);
 }
 
 html,
@@ -25,7 +27,7 @@ html {
 }
 
 body {
-  @apply bg-[#060816] text-white font-sans;
+  @apply bg-canvas text-white font-sans;
 }
 
 :root {

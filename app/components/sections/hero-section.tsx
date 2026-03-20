@@ -27,7 +27,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
         className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 h-175 w-175 md:right-[5%] -z-10"
         style={{
           background:
-            "radial-gradient(ellipse at center, #0b1022 0%, transparent 70%)",
+            "radial-gradient(ellipse at center, var(--color-surface) 0%, transparent 70%)",
           opacity: 0.7,
         }}
       />
@@ -76,7 +76,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
             )}
           >
             {config.targetRoles.map((role) => (
-              <Badge key={role} variant="outline" className="border-white/25 text-[#4d98a2]">
+              <Badge key={role} variant="outline" className="border-white/25 text-accent-violet">
                 {role}
               </Badge>
             ))}
@@ -115,7 +115,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
               className="absolute -inset-1 rounded-full opacity-60 blur-sm"
               style={{
                 background:
-                  "conic-gradient(from 180deg, #6366f1, #8b5cf6, #a78bfa, #6366f1)",
+                  "var(--gradient-glow)",
               }}
             />
             <img

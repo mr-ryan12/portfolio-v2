@@ -28,10 +28,18 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
           Skills &amp; Toolbox
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 md:items-start">
-          {skillGroups.map((group) => (
+          {skillGroups.map((group, index) => (
             <div
               key={group.id}
-              className="rounded-xl border border-border bg-surface p-6"
+              className={cn(
+                "rounded-xl border border-border bg-surface p-6 transition-[opacity,translate] duration-500 ease-out",
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6",
+              )}
+              style={{
+                transitionDelay: isVisible ? `${index * 150}ms` : "0ms",
+              }}
             >
               <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">
                 {group.label}
