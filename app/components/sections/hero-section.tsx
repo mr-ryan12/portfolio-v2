@@ -112,7 +112,7 @@ export default function HeroSection({ config }: HeroSectionProps) {
             {/* Gradient glow behind the image */}
             <div
               aria-hidden="true"
-              className="absolute -inset-1 rounded-full opacity-60 blur-sm"
+              className="absolute -inset-0.5 rounded-full opacity-40 blur-sm"
               style={{
                 background:
                   "var(--gradient-glow)",
