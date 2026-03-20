@@ -11,6 +11,7 @@ import AboutSection from "~/components/sections/about-section";
 import ExperienceSection from "~/components/sections/experience-section";
 import SkillsSection from "~/components/sections/skills-section";
 import ContactSection from "~/components/sections/contact-section";
+import StarField from "~/components/star-field";
 
 const SITE_URL = "https://rmcbride.dev";
 const OG_IMAGE_URL = `${SITE_URL}/og/portfolio-preview.png`;
@@ -55,6 +56,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
   return (
     <>
+      <StarField />
       <SiteHeader />
       <main id="main-content" className="min-h-screen">
         <HeroSection config={config} />
