@@ -57,8 +57,8 @@ export default function AboutSection({ about }: AboutSectionProps) {
               </div>
               <div className="rounded-xl bg-surface-muted p-4 border border-border">
                 <p className="text-sm text-muted-foreground leading-6">
-                  Product-conscious approach. Ship interfaces that are
-                  polished, usable, and built on sound engineering decisions.
+                  Product-conscious approach to building software that is polished,
+                  usable, and intuitive.
                 </p>
               </div>
             </div>
