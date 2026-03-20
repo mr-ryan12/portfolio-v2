@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
     startDate: "June 2022",
     endDate: "Aug 2022",
     impact:
-      "Built frontend features for internal tools and consumer-facing applications during an intensive summer internship.",
+      "Built frontend features for internal tools at Vizio, quickly adapting to Vue.js despite a primarily React-focused background.",
     icon: "layout",
   },
   {
