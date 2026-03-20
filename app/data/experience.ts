@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
     startDate: "Aug 2015",
     endDate: "Sept 2021",
     impact:
-      "Managed a vocational program mentoring adults with developmental disabilities — shaped how I think about communication, systems design, and building for real people.",
+      "Managed a vocational program supporting adults with developmental disabilities, an experience that shaped how I think about communication, systems, and building for real people.",
     icon: "users",
   },
 ];
