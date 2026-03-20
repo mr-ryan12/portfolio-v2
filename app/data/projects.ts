@@ -24,9 +24,9 @@ export const projects: Project[] = [
     title: "ThreadMind",
     role: "Software Engineer",
     description:
-      "Built to move beyond the surface-level buzz around AI tooling and understand the architecture firsthand — vector storage, embeddings, similarity search, and document ingestion. I chose pgvector over a dedicated vector database to explore semantic retrieval within a simpler PostgreSQL-based stack.",
+      "Built to move beyond the surface-level buzz around AI tooling and understand the architecture firsthand, including vector storage, embeddings, similarity search, and document ingestion. I chose pgvector over a dedicated vector database so I could explore semantic retrieval within a simpler PostgreSQL-based stack.",
     outcome:
-      "The hardest part was making it feel like a coherent application instead of a collection of AI demos. Upload, ingestion, chunking, embeddings, retrieval, and chat all had to work together as a product — not just be technically functional.",
+      "The hardest part was making it feel like a real product instead of just a simple chat app. Upload, ingestion, chunking, embeddings, retrieval, and chat all had to work together in a way that felt cohesive.",
     technologies: [
       getTechnology("remix"),
       getTechnology("typescript"),
@@ -45,9 +45,9 @@ export const projects: Project[] = [
     title: "Spectrum On Demand",
     role: "Technical Lead",
     description:
-      "Served as technical lead on a high-traffic consumer streaming product at Charter Communications, supporting over 1 million monthly visitors. I integrated live TV streaming from the Networks page into Spectrum's external Live TV application and implemented analytics tracking to better understand user behavior across the platform.",
+      "Served as technical lead on a high-traffic consumer streaming product at Charter Communications, supporting over 1 million monthly visitors. I integrated live TV streaming from the Networks page into Spectrum's external Live TV application and implemented analytics tracking to better understand how users interacted with the platform.",
     outcome:
-      "The interesting part was working at scale — making product decisions that connected the user experience with measurable behavior, on a platform where changes reached a large audience immediately.",
+      "The interesting part was working at scale and making product decisions that connected user experience with measurable behavior on a platform where changes reached a large audience immediately.",
     technologies: [
       getTechnology("react"),
       getTechnology("graphql"),
