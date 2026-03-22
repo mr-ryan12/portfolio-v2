@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
   title: "Software Engineer",
   tagline: "DENVER, CO \u00B7 SOFTWARE ENGINEER",
   heroHeadline:
-    "Product-minded software engineer building polished web applications.",
+    "Product-minded software engineer building polished, user-facing web applications.",
   targetRoles: ["Software Engineer", "Frontend Focus", "Backend Experience"],
   about: {
     headline: "Why I build the way I do.",
