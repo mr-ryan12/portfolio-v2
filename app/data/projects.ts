@@ -11,11 +11,12 @@ export interface Project {
   title: string;
   role: string;
   description: string;
-  outcome: string;
+  highlights: string[];
   technologies: Technology[];
   links: ProjectLinks;
   featured: boolean;
   order: number;
+  nda?: boolean;
 }
 
 export const projects: Project[] = [
@@ -24,9 +25,12 @@ export const projects: Project[] = [
     title: "ThreadMind",
     role: "Software Engineer",
     description:
-      "Built to move beyond the surface-level buzz around AI tooling and understand the architecture firsthand, including vector storage, embeddings, similarity search, and document ingestion. I chose pgvector over a dedicated vector database so I could explore semantic retrieval within a simpler PostgreSQL-based stack.",
-    outcome:
-      "The hardest part was making it feel like a real product instead of just a simple chat app. Upload, ingestion, chunking, embeddings, retrieval, and chat all had to work together in a way that felt cohesive.",
+      "Built to move past the surface-level buzz around AI and understand the architecture firsthand. Created a document-aware chat application that lets users upload files and ask questions grounded in their own content.",
+    highlights: [
+      "Designed the full ingestion pipeline, including upload, chunking, embedding, and semantic retrieval, using pgvector within a PostgreSQL-based stack.",
+      "Built a cohesive product with threaded conversations, context-aware responses, and document ingestion, not just a basic chat interface.",
+      "Deployed as a solo project, supporting document-aware chat across multiple file types including PDF, DOCX, and plain text.",
+    ],
     technologies: [
       getTechnology("remix"),
       getTechnology("typescript"),
