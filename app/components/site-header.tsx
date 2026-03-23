@@ -21,7 +21,9 @@ const NAV_LINKS: NavLink[] = [
   { label: "Resume", href: "/resume", isRoute: true },
 ];
 
-const SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
+const SECTION_IDS = NAV_LINKS.filter((link) => !link.isRoute).map((link) =>
+  link.href.slice(1),
+);
 
 const SITE_NAME = "Ryan McBride";
 
