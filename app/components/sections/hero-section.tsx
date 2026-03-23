@@ -1,6 +1,7 @@
 import type { SiteConfig } from "~/data/config";
 import { Button } from "~/components/ui/button";
 import { Badge } from "~/components/ui/badge";
+import { Download } from "lucide-react";
 import { useScrollReveal } from "~/hooks/use-scroll-reveal";
 import { cn } from "~/lib/utils";
 
@@ -94,7 +95,13 @@ export default function HeroSection({ config }: HeroSectionProps) {
               <a href="#projects">View My Work</a>
             </Button>
             <Button asChild variant="outline">
-              <a href="#contact">Get In Touch</a>
+              <a
+                href="/ryan-mcbride-resume.pdf"
+                download
+              >
+                <Download className="h-4 w-4 mr-1" />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>

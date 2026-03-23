@@ -1,7 +1,7 @@
 import type { Project } from "~/data/projects";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Lock } from "lucide-react";
 import { useScrollReveal } from "~/hooks/use-scroll-reveal";
 import { cn } from "~/lib/utils";
 
@@ -30,7 +30,12 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
           Projects
         </h2>
 
-        <div className="flex flex-col gap-6 mt-12">
+        <p className="text-sm text-muted-foreground mt-4">
+          Some recent projects are under NDA. Details and deeper technical
+          discussion are available in interviews.
+        </p>
+
+        <div className="flex flex-col gap-6 mt-8">
           {projects.map((project, index) => (
             <article
               key={project.id}
@@ -77,7 +82,12 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                     ))}
                   </div>
 
-                  {(project.links.demo ?? project.links.repo) && (
+                  {project.nda ? (
+                    <div className="flex items-center gap-2 mt-auto text-muted-foreground">
+                      <Lock className="h-3.5 w-3.5" />
+                      <span className="text-xs italic">Under NDA</span>
+                    </div>
+                  ) : (project.links.demo ?? project.links.repo) ? (
                     <div className="flex flex-wrap gap-2 mt-auto">
                       {project.links.demo && (
                         <Button variant="ghost" size="sm" asChild>
@@ -87,7 +97,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                             rel="noopener noreferrer"
                           >
                             <ExternalLink className="h-4 w-4 mr-1" />
-                            Live Demo
+                            {project.links.demoLabel ?? "Live Demo"}
                           </a>
                         </Button>
                       )}
@@ -104,7 +114,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                         </Button>
                       )}
                     </div>
-                  )}
+                  ) : null}
                 </div>
 
                 {/* Divider */}
@@ -113,9 +123,22 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                 {/* Right column — narrative */}
                 <div className="p-6 md:w-[62%] md:py-8 md:pr-8 md:pl-6 flex flex-col justify-center">
                   <p className="font-medium leading-7">{project.description}</p>
-                  <p className="text-sm text-muted-foreground mt-3 leading-6">
-                    {project.outcome}
-                  </p>
+                  <ul className="mt-3 flex flex-col gap-2">
+                    {project.highlights.map((highlight, i) => (
+                      <li
+                        key={i}
+                        className="text-sm text-muted-foreground leading-6 flex gap-2"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="text-accent-violet mt-0.5 shrink-0"
+                        >
+                          &bull;
+                        </span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </article>

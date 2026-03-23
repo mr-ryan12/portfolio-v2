@@ -3,6 +3,7 @@ import { getTechnology } from "~/data/technologies";
 
 export type ProjectLinks = {
   demo?: string;
+  demoLabel?: string;
   repo?: string;
 };
 
@@ -11,11 +12,12 @@ export interface Project {
   title: string;
   role: string;
   description: string;
-  outcome: string;
+  highlights: string[];
   technologies: Technology[];
   links: ProjectLinks;
   featured: boolean;
   order: number;
+  nda?: boolean;
 }
 
 export const projects: Project[] = [
@@ -24,9 +26,12 @@ export const projects: Project[] = [
     title: "ThreadMind",
     role: "Software Engineer",
     description:
-      "Built to move beyond the surface-level buzz around AI tooling and understand the architecture firsthand, including vector storage, embeddings, similarity search, and document ingestion. I chose pgvector over a dedicated vector database so I could explore semantic retrieval within a simpler PostgreSQL-based stack.",
-    outcome:
-      "The hardest part was making it feel like a real product instead of just a simple chat app. Upload, ingestion, chunking, embeddings, retrieval, and chat all had to work together in a way that felt cohesive.",
+      "Built to move past the surface-level buzz around AI and understand the architecture firsthand. Created a document-aware chat application that lets users upload files and ask questions grounded in their own content.",
+    highlights: [
+      "Designed the full ingestion pipeline, including upload, chunking, embedding, and semantic retrieval, using pgvector within a PostgreSQL-based stack.",
+      "Built a cohesive product with threaded conversations, context-aware responses, and document ingestion, not just a basic chat interface.",
+      "Deployed as a solo project, supporting document-aware chat across multiple file types including PDF, DOCX, and plain text.",
+    ],
     technologies: [
       getTechnology("remix"),
       getTechnology("typescript"),
@@ -41,13 +46,38 @@ export const projects: Project[] = [
     order: 1,
   },
   {
+    id: "rapid-quote",
+    title: "Rapid Quote (NDA)",
+    role: "Software Engineer",
+    description:
+      "Led development of a greenfield internal platform at Charter Communications, originally scoped for a five-engineer team. Delivered it with a two-engineer team ahead of schedule and under budget.",
+    highlights: [
+      "Designed and built a dynamic rules engine that controlled field visibility and values based on user selections, turning complex business logic into a maintainable system.",
+      "Implemented bidirectional data synchronization with Salesforce, enabling real-time updates and reliable consistency across platforms.",
+      "Reduced sales-to-engineering engagement time for ROI analysis from weeks to minutes, earning recognition from VP-level leadership.",
+    ],
+    technologies: [
+      getTechnology("remix"),
+      getTechnology("typescript"),
+      getTechnology("prisma"),
+      getTechnology("postgresql"),
+    ],
+    links: {},
+    featured: true,
+    order: 2,
+    nda: true,
+  },
+  {
     id: "spectrum-on-demand",
     title: "Spectrum On Demand",
     role: "Technical Lead",
     description:
-      "Served as technical lead on a high-traffic consumer streaming product at Charter Communications, supporting over 1 million monthly visitors. I integrated live TV streaming from the Networks page into Spectrum's external Live TV application and implemented analytics tracking to better understand how users interacted with the platform.",
-    outcome:
-      "The interesting part was working at scale and making product decisions that connected user experience with measurable behavior on a platform where changes reached a large audience immediately.",
+      "Technical lead on a high-traffic consumer streaming product at Charter Communications, serving 1M+ monthly visitors. Led feature delivery across the On Demand platform while coordinating closely with product and design teams.",
+    highlights: [
+      "Integrated Apple TV+, Xumo, and Peacock into Spectrum's marketing experience, expanding content discovery for over 1M monthly users.",
+      "Built analytics tracking to surface user behavior patterns and support more informed product decisions.",
+      "Led implementation across the On Demand platform, translating product requirements into consumer-facing features at scale.",
+    ],
     technologies: [
       getTechnology("react"),
       getTechnology("graphql"),
@@ -56,18 +86,22 @@ export const projects: Project[] = [
     ],
     links: {
       demo: "https://ondemand.spectrum.net/",
+      demoLabel: "View Site",
     },
     featured: true,
-    order: 2,
+    order: 3,
   },
   {
     id: "phish",
     title: "Phish",
     role: "Software Engineer",
     description:
-      "A frontend product showcase built around music discovery and interaction design, not just a generic music player. I wanted to create an experience where users could explore a deep catalog of Phish's music in a way that felt fast, clear, and easy to navigate.",
-    outcome:
-      "Built in about three days under a compressed timeline, the project's strongest point is its frontend thinking and product direction: polished client-side discovery, playlist-style interaction, and a focus on making the experience feel intentional despite the tight scope.",
+      "A frontend product showcase built around music discovery and interaction design. The goal was to create an experience where users could explore a deep catalog in a way that felt fast, clear, and intentional, not just another generic music player.",
+    highlights: [
+      "Designed browse and playlist-style interaction flows focused on discovery and ease of navigation.",
+      "Built a polished, responsive UI with client-side routing and Cypress-based end-to-end testing.",
+      "Shipped the full application in 3 days under a compressed timeline, prioritizing product thinking and UX polish over feature count.",
+    ],
     technologies: [
       getTechnology("react"),
       getTechnology("react-router"),
@@ -78,7 +112,7 @@ export const projects: Project[] = [
       demo: "https://phish-showcase.vercel.app/",
     },
     featured: true,
-    order: 3,
+    order: 4,
   },
 ];
 
