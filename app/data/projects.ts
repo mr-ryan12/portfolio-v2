@@ -67,16 +67,19 @@ export const projects: Project[] = [
       demoLabel: "View Site",
     },
     featured: true,
-    order: 2,
+    order: 3,
   },
   {
     id: "phish",
     title: "Phish",
     role: "Software Engineer",
     description:
-      "A frontend product showcase built around music discovery and interaction design, not just a generic music player. I wanted to create an experience where users could explore a deep catalog of Phish's music in a way that felt fast, clear, and easy to navigate.",
-    outcome:
-      "Built in about three days under a compressed timeline, the project's strongest point is its frontend thinking and product direction: polished client-side discovery, playlist-style interaction, and a focus on making the experience feel intentional despite the tight scope.",
+      "A frontend product showcase built around music discovery and interaction design. The goal was to create an experience where users could explore a deep catalog in a way that felt fast, clear, and intentional, not just another generic music player.",
+    highlights: [
+      "Designed browse and playlist-style interaction flows focused on discovery and ease of navigation.",
+      "Built a polished, responsive UI with client-side routing and Cypress-based end-to-end testing.",
+      "Shipped the full application in 3 days under a compressed timeline, prioritizing product thinking and UX polish over feature count.",
+    ],
     technologies: [
       getTechnology("react"),
       getTechnology("react-router"),
@@ -87,7 +90,7 @@ export const projects: Project[] = [
       demo: "https://phish-showcase.vercel.app/",
     },
     featured: true,
-    order: 3,
+    order: 4,
   },
 ];
 
