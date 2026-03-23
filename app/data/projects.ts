@@ -3,6 +3,7 @@ import { getTechnology } from "~/data/technologies";
 
 export type ProjectLinks = {
   demo?: string;
+  demoLabel?: string;
   repo?: string;
 };
 
@@ -63,6 +64,7 @@ export const projects: Project[] = [
     ],
     links: {
       demo: "https://ondemand.spectrum.net/",
+      demoLabel: "View Site",
     },
     featured: true,
     order: 2,

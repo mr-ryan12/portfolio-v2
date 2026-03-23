@@ -87,7 +87,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                             rel="noopener noreferrer"
                           >
                             <ExternalLink className="h-4 w-4 mr-1" />
-                            Live Demo
+                            {project.links.demoLabel ?? "Live Demo"}
                           </a>
                         </Button>
                       )}
