@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Menu } from "lucide-react";
-import { useNavigate } from "react-router";
+import { ArrowLeft, Menu } from "lucide-react";
+import { useLocation, useNavigate } from "react-router";
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
 import { Button } from "~/components/ui/button";
 import { useActiveSection } from "~/hooks/use-active-section";
@@ -31,8 +31,10 @@ function scrollToSection(id: string) {
 
 export default function SiteHeader(): React.ReactElement {
   const navigate = useNavigate();
+  const location = useLocation();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const activeId = useActiveSection(SECTION_IDS);
+  const isHomePage = location.pathname === "/";
 
   const handleSiteNameClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -58,59 +60,12 @@ export default function SiteHeader(): React.ReactElement {
           {SITE_NAME}
         </a>
 
-        {/* Desktop nav */}
-        <nav
-          aria-label="Primary navigation"
-          className="hidden md:flex md:items-center md:gap-6"
-        >
-          {NAV_LINKS.map((link) => {
-            if (link.isRoute) {
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
-                >
-                  {link.label}
-                </a>
-              );
-            }
-            const id = link.href.slice(1);
-            return (
-              <a
-                key={link.href}
-                href={link.href}
-                aria-current={activeId === id ? "true" : undefined}
-                onClick={(e) => { e.preventDefault(); scrollToSection(id); }}
-                className={cn(
-                  "text-sm transition-colors duration-200",
-                  activeId === id
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )}
-              >
-                {link.label}
-              </a>
-            );
-          })}
-        </nav>
-
-        {/* Mobile nav trigger */}
-        <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
-          <SheetTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              aria-label="Open navigation menu"
-            >
-              <Menu className="h-5 w-5" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-64">
+        {isHomePage ? (
+          <>
+            {/* Desktop nav */}
             <nav
-              aria-label="Mobile navigation"
-              className="flex flex-col gap-6 pt-10 px-2"
+              aria-label="Primary navigation"
+              className="hidden md:flex md:items-center md:gap-6"
             >
               {NAV_LINKS.map((link) => {
                 if (link.isRoute) {
@@ -118,8 +73,7 @@ export default function SiteHeader(): React.ReactElement {
                     <a
                       key={link.href}
                       href={link.href}
-                      onClick={() => setMobileNavOpen(false)}
-                      className="text-base font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                      className="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
                     >
                       {link.label}
                     </a>
@@ -130,9 +84,13 @@ export default function SiteHeader(): React.ReactElement {
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={(e) => { e.preventDefault(); scrollToSection(id); setMobileNavOpen(false); }}
+                    aria-current={activeId === id ? "true" : undefined}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(id);
+                    }}
                     className={cn(
-                      "text-base font-medium transition-colors duration-200",
+                      "text-sm transition-colors duration-200",
                       activeId === id
                         ? "text-foreground"
                         : "text-muted-foreground hover:text-foreground",
@@ -143,8 +101,71 @@ export default function SiteHeader(): React.ReactElement {
                 );
               })}
             </nav>
-          </SheetContent>
-        </Sheet>
+
+            {/* Mobile nav trigger */}
+            <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="md:hidden"
+                  aria-label="Open navigation menu"
+                >
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-64">
+                <nav
+                  aria-label="Mobile navigation"
+                  className="flex flex-col gap-6 pt-10 px-2"
+                >
+                  {NAV_LINKS.map((link) => {
+                    if (link.isRoute) {
+                      return (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          onClick={() => setMobileNavOpen(false)}
+                          className="text-base font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                        >
+                          {link.label}
+                        </a>
+                      );
+                    }
+                    const id = link.href.slice(1);
+                    return (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMobileNavOpen(false);
+                          scrollToSection(id);
+                        }}
+                        className={cn(
+                          "text-base font-medium transition-colors duration-200",
+                          activeId === id
+                            ? "text-foreground"
+                            : "text-muted-foreground hover:text-foreground",
+                        )}
+                      >
+                        {link.label}
+                      </a>
+                    );
+                  })}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </>
+        ) : (
+          <a
+            href="/"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Portfolio
+          </a>
+        )}
       </div>
     </header>
   );
