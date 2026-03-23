@@ -9,6 +9,7 @@ import { cn } from "~/lib/utils";
 interface NavLink {
   label: string;
   href: string;
+  isRoute?: boolean;
 }
 
 const NAV_LINKS: NavLink[] = [
@@ -17,6 +18,7 @@ const NAV_LINKS: NavLink[] = [
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
+  { label: "Resume", href: "/resume", isRoute: true },
 ];
 
 const SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
@@ -62,6 +64,17 @@ export default function SiteHeader(): React.ReactElement {
           className="hidden md:flex md:items-center md:gap-6"
         >
           {NAV_LINKS.map((link) => {
+            if (link.isRoute) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              );
+            }
             const id = link.href.slice(1);
             return (
               <a
@@ -100,6 +113,18 @@ export default function SiteHeader(): React.ReactElement {
               className="flex flex-col gap-6 pt-10 px-2"
             >
               {NAV_LINKS.map((link) => {
+                if (link.isRoute) {
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMobileNavOpen(false)}
+                      className="text-base font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
                 const id = link.href.slice(1);
                 return (
                   <a
