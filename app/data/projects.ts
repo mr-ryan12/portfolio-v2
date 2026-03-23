@@ -49,9 +49,12 @@ export const projects: Project[] = [
     title: "Spectrum On Demand",
     role: "Technical Lead",
     description:
-      "Served as technical lead on a high-traffic consumer streaming product at Charter Communications, supporting over 1 million monthly visitors. I integrated live TV streaming from the Networks page into Spectrum's external Live TV application and implemented analytics tracking to better understand how users interacted with the platform.",
-    outcome:
-      "The interesting part was working at scale and making product decisions that connected user experience with measurable behavior on a platform where changes reached a large audience immediately.",
+      "Technical lead on a high-traffic consumer streaming product at Charter Communications, serving 1M+ monthly visitors. Led feature delivery across the On Demand platform while coordinating closely with product and design teams.",
+    highlights: [
+      "Integrated Apple TV+, Xumo, and Peacock into Spectrum's marketing experience, expanding content discovery for over 1M monthly users.",
+      "Built analytics tracking to surface user behavior patterns and support more informed product decisions.",
+      "Led implementation across the On Demand platform, translating product requirements into consumer-facing features at scale.",
+    ],
     technologies: [
       getTechnology("react"),
       getTechnology("graphql"),
