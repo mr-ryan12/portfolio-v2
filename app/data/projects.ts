@@ -46,6 +46,28 @@ export const projects: Project[] = [
     order: 1,
   },
   {
+    id: "rapid-quote",
+    title: "Rapid Quote (NDA)",
+    role: "Software Engineer",
+    description:
+      "Led development of a greenfield internal platform at Charter Communications, originally scoped for a five-engineer team. Delivered it with a two-engineer team ahead of schedule and under budget.",
+    highlights: [
+      "Designed and built a dynamic rules engine that controlled field visibility and values based on user selections, turning complex business logic into a maintainable system.",
+      "Implemented bidirectional data synchronization with Salesforce, enabling real-time updates and reliable consistency across platforms.",
+      "Reduced sales-to-engineering engagement time for ROI analysis from weeks to minutes, earning recognition from VP-level leadership.",
+    ],
+    technologies: [
+      getTechnology("remix"),
+      getTechnology("typescript"),
+      getTechnology("prisma"),
+      getTechnology("postgresql"),
+    ],
+    links: {},
+    featured: true,
+    order: 2,
+    nda: true,
+  },
+  {
     id: "spectrum-on-demand",
     title: "Spectrum On Demand",
     role: "Technical Lead",
