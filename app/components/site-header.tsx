@@ -53,7 +53,7 @@ export default function SiteHeader(): React.ReactElement {
         Skip to content
       </a>
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-14">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6 md:px-10 lg:px-14">
         <a
           href="/"
           onClick={(e) => handleSiteNameClick(e)}

@@ -74,8 +74,8 @@ export default function ResumePage({ loaderData }: Route.ComponentProps) {
             </h2>
             <div className="mt-4 flex flex-col gap-3">
               {resume.skills.map((group) => (
-                <div key={group.label} className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className="text-sm font-medium w-40 shrink-0">
+                <div key={group.label} className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-x-2">
+                  <span className="text-sm font-medium sm:w-40 sm:shrink-0">
                     {group.label}
                   </span>
                   <span className="text-sm text-muted-foreground">
