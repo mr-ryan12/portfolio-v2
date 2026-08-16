@@ -146,7 +146,7 @@ export default function ResumePage({ loaderData }: Route.ComponentProps) {
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                     <div>
                       <h3 className="font-semibold">
-                        {edu.credential}: {edu.field}
+                        {edu.credential} in {edu.field}
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {edu.institution} — {edu.location}

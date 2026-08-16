@@ -37,31 +37,37 @@ export const resume: Resume = {
   title: "Software Engineer",
   location: "Denver, CO",
   summary:
-    "Full-stack Software Engineer focused on high-ownership, user-centered product development using TypeScript, React, Node.js, Prisma, and PostgreSQL. I've led complex greenfield initiatives that integrate deeply with Salesforce and analytics systems, working in close partnership with product and design teams.",
+    "Product-focused Software Engineer experienced in building reliable web applications with TypeScript, React, Node.js, and PostgreSQL. Led greenfield initiatives from architecture through delivery, partnering with product and design teams to turn complex data and workflows into intuitive user experiences.",
   skills: [
     {
-      label: "Languages",
-      items: ["TypeScript", "JavaScript", "HTML", "CSS", "SQL", "GraphQL"],
-    },
-    {
-      label: "Backend / Data",
-      items: ["Node.js", "Prisma", "PostgreSQL", "Redis"],
-    },
-    {
       label: "Frontend",
-      items: ["React", "Remix", "Vue.js", "Tailwind", "React Query"],
+      items: [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Remix",
+        "Vue.js",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "React Query",
+      ],
+    },
+    {
+      label: "Backend & Data",
+      items: ["Node.js", "Prisma", "PostgreSQL", "Redis", "GraphQL", "SQL"],
     },
     {
       label: "Testing",
-      items: ["Cypress", "Jest", "Vitest"],
+      items: ["Cypress", "Jest", "Vitest", "Mocha", "Chai"],
     },
     {
-      label: "Tools & Methodologies",
-      items: ["Git", "Agile", "OOP", "TDD"],
+      label: "Tools & Practices",
+      items: ["Git", "API Integration", "Test-Driven Development", "Agile"],
     },
     {
-      label: "Agentic Workflow",
-      items: ["Claude Code", "Kiro", "SpecKit"],
+      label: "AI-Assisted Development",
+      items: ["Kiro", "Claude Code", "Spec Kit"],
     },
   ],
   experience: [
@@ -72,11 +78,12 @@ export const resume: Resume = {
       startDate: "September 2022",
       endDate: "Present",
       bullets: [
-        "Led end-to-end development of a greenfield platform originally scoped for five engineers; delivered it with a two-engineer team ahead of schedule and under budget, enabling resource reallocation and contract renewals",
-        "Designed and implemented bidirectional data synchronization with Salesforce, enabling real-time updates and high-fidelity data consistency across platforms",
-        "Reduced sales-to-engineering engagement time for ROI analysis from weeks to minutes",
-        "Integrated Apple TV+, Xumo, and NBC Peacock into Spectrum's marketing site, supporting 1M+ monthly visitors",
-        "Enhanced customer behavior analytics to drive data-informed decisions, improving engagement and retention",
+        "Led end-to-end development of a greenfield platform originally scoped for five engineers, delivering it with a two-engineer team ahead of schedule and under budget",
+        "Implemented AI-assisted development workflows across two high-visibility, revenue-impacting projects, configuring custom agents, project-specific guidance, and documentation to standardize and accelerate feature delivery for a 12-person team",
+        "Developed an ROI analysis workflow that reduced sales-to-engineering turnaround time from weeks to minutes",
+        "Built a bidirectional Salesforce integration that enabled real-time updates and maintained consistent customer data across platforms",
+        "Integrated Apple TV+, Xumo, and Peacock offerings into Spectrum's marketing platform, supporting more than one million monthly visitors",
+        "Enhanced customer-behavior analytics to help product teams make data-informed engagement and retention decisions",
         "Served as technical lead for Spectrum On Demand and On Demand Audit applications, guiding architecture, implementation, and team collaboration",
       ],
     },
@@ -87,9 +94,9 @@ export const resume: Resume = {
       startDate: "June 2022",
       endDate: "August 2022",
       bullets: [
-        "Designed and developed key frontend features for a Vue.js application, rapidly becoming productive in the framework despite a React-focused background",
-        "Collaborated closely with backend teams to ensure seamless API integration and strong user experience",
-        "Supported peers in adopting modern JavaScript frontend practices, contributing to a collaborative learning culture",
+        "Built key customer-facing features for a Vue.js application, quickly becoming productive in a new framework",
+        "Partnered with backend engineers to integrate APIs and deliver cohesive user experiences",
+        "Helped teammates adopt modern JavaScript and frontend development practices",
       ],
     },
     {
@@ -99,9 +106,8 @@ export const resume: Resume = {
       startDate: "August 2015",
       endDate: "September 2021",
       bullets: [
-        "Mentored and supervised a team of 20 adults with developmental disabilities, strengthening leadership, communication, and problem-solving skills",
+        "Managed and mentored a team of 20 adults with developmental disabilities, strengthening leadership, communication, and problem-solving skills",
         "Oversaw operations for electronics recycling, facility performance, and laptop refurbishment programs",
-        "Facilitated individualized support plans emphasizing empathy, organization, and collaboration",
       ],
     },
   ],
@@ -112,10 +118,6 @@ export const resume: Resume = {
       institution: "Turing School of Software and Design",
       location: "Denver, CO",
       date: "April 2022",
-      bullets: [
-        "Built web applications in a frontend engineering capacity at the only ACCET-accredited accelerated software development program in the US",
-        "Applied JavaScript, HTML, CSS, Mocha, Chai, Cypress and React in solo and group projects",
-      ],
     },
     {
       credential: "Bachelor of Science",

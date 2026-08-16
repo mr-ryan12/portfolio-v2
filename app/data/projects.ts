@@ -100,7 +100,7 @@ export const projects: Project[] = [
     highlights: [
       "Designed browse and playlist-style interaction flows focused on search, discovery, and ease of navigation.",
       "Built a polished, responsive UI with dark/light themes.",
-      "A rebuilt of an existing project with upgraded technologies and SSR.",
+      "Rebuilt an existing project with updated technologies and server-side rendering.",
     ],
     technologies: [
       getTechnology("react"),
