@@ -31,7 +31,7 @@ export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
           I work across frontend, backend, and modern development workflows,
           including AI-assisted tools that help me build more intentionally.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 md:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:auto-rows-fr gap-6 mt-12">
           {skillGroups.map((group, index) => (
             <div
               key={group.id}

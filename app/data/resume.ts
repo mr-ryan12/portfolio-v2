@@ -50,7 +50,7 @@ export const resume: Resume = {
         "HTML",
         "CSS",
         "Tailwind CSS",
-        "React Query",
+        "TanStack Query",
       ],
     },
     {
@@ -82,7 +82,13 @@ export const resume: Resume = {
     },
     {
       label: "Agentic Development",
-      items: ["Kiro", "Claude Code", "Codex", "Spec Kit"],
+      items: [
+        "Kiro",
+        "Claude Code",
+        "Codex",
+        "Spec Kit",
+        "Spec-Driven Development",
+      ],
     },
   ],
   experience: [

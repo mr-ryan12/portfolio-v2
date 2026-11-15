@@ -74,7 +74,7 @@ export const technologies: Technology[] = [
   },
   {
     id: "tailwindcss",
-    name: "TailwindCSS",
+    name: "Tailwind CSS",
     description: "Utility-first CSS framework for rapid UI development.",
     links: {
       website: "https://tailwindcss.com",
@@ -198,21 +198,14 @@ export const technologies: Technology[] = [
     },
   },
   {
-    id: "oop",
-    name: "OOP",
-    description:
-      "A programming paradigm that organizes code around objects, which are data fields with unique attributes and behaviors",
-    links: {},
-  },
-  {
     id: "tdd",
-    name: "TDD",
+    name: "Test-Driven Development",
     description: `A practice where developers write automated tests before writing the actual functional code, following a "Red-Green-Refactor" cycle`,
     links: {},
   },
   {
     id: "sdd",
-    name: "Spec-Driven Dev",
+    name: "Spec-Driven Development",
     description:
       "Engineering approach where structured specifications are the primary artifact, created before implementation to define behavioral constraints",
     links: {},
@@ -288,7 +281,7 @@ export const technologies: Technology[] = [
   },
   {
     id: "speckit",
-    name: "SpecKit",
+    name: "Spec Kit",
     description:
       "Spec-driven development workflow toolkit for AI-assisted feature planning, specification, and implementation.",
     links: {
@@ -303,6 +296,78 @@ export const technologies: Technology[] = [
     links: {
       website: "https://openai.com/codex/",
     },
+  },
+  {
+    id: "javascript",
+    name: "JavaScript",
+    description:
+      "The programming language of the web, used to build interactive client and server applications.",
+    links: {
+      docs: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
+  },
+  {
+    id: "html",
+    name: "HTML",
+    description:
+      "The standard markup language for structuring content on the web.",
+    links: {
+      docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    },
+  },
+  {
+    id: "css",
+    name: "CSS",
+    description:
+      "The stylesheet language used to control the layout and presentation of web pages.",
+    links: {
+      docs: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    },
+  },
+  {
+    id: "kafka",
+    name: "Kafka",
+    description:
+      "Distributed event streaming platform for high-throughput, fault-tolerant data pipelines.",
+    links: {
+      website: "https://kafka.apache.org/",
+      docs: "https://kafka.apache.org/documentation/",
+      github: "https://github.com/apache/kafka",
+    },
+  },
+  {
+    id: "sql",
+    name: "SQL",
+    description:
+      "Structured Query Language for defining, querying, and managing relational data.",
+    links: {},
+  },
+  {
+    id: "mocha",
+    name: "Mocha",
+    description:
+      "Flexible JavaScript test framework for Node.js and the browser.",
+    links: {
+      website: "https://mochajs.org/",
+      github: "https://github.com/mochajs/mocha",
+    },
+  },
+  {
+    id: "chai",
+    name: "Chai",
+    description:
+      "BDD/TDD assertion library for Node.js and the browser, commonly paired with Mocha.",
+    links: {
+      website: "https://www.chaijs.com/",
+      github: "https://github.com/chaijs/chai",
+    },
+  },
+  {
+    id: "api-integration",
+    name: "API Integration",
+    description:
+      "Connecting applications to internal and third-party services through REST and GraphQL APIs.",
+    links: {},
   },
 ];
 
