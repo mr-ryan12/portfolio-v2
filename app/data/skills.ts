@@ -56,6 +56,7 @@ export const skillGroups: SkillGroup[] = [
     order: 4,
     technologies: [
       getTechnology("claude-code"),
+      getTechnology('codex'),
       getTechnology("kiro"),
       getTechnology("speckit"),
     ],

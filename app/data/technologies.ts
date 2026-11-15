@@ -295,6 +295,15 @@ export const technologies: Technology[] = [
       github: "https://github.com/github/spec-kit",
     },
   },
+  {
+    id: "codex",
+    name: "Codex",
+    description:
+      "OpenAI's agentic coding tool that reads, edits, and runs code across your codebase from the terminal or IDE.",
+    links: {
+      website: "https://openai.com/codex/",
+    },
+  },
 ];
 
 export function getTechnology(id: string): Technology {
